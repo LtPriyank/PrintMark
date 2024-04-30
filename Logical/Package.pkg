@@ -8,5 +8,6 @@
     <Object Type="DataObject" Language="Ett">acp10etxen</Object>
     <Object Type="Package" Description="gBeltAxisobj">gBeltAxisobj</Object>
     <Object Type="Package" Description="gCutAxisobj">gCutAxisobj</Object>
+    <Object Type="Package">SOURCE</Object>
   </Objects>
 </Package>

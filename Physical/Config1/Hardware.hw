@@ -55,6 +55,9 @@
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
       <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
+    <Connector Name="IF3">
+      <Parameter ID="CycleTime" Value="400" />
+    </Connector>
     <Parameter ID="ConfigurationID" Value="PrintMark_Config1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="X20CP1584.IF3" />

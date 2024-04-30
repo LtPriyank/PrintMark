@@ -1,0 +1,3 @@
+VAR
+	iFb_MpAxisBasic : MpAxisBasic; (*Cutter Mp Axis Basic Variable*)
+END_VAR

@@ -1,0 +1,8 @@
+(*MpAxisBasic type variable*)
+VAR
+	iFb_MpAxisBasic : MpAxisBasic; (*Belt Mp Axis Basic Variable*)
+END_VAR
+(*Enumeration variable*)
+VAR
+	enBeltManualSteps : enBeltManualMode; (*Enumeration type variable for manual mode*)
+END_VAR
