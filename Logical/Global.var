@@ -1,0 +1,4 @@
+VAR
+	gBeltAxis : ACP10AXIS_typ; (*This axis is for controlling the Belt axis*)
+	gCutAxis : ACP10AXIS_typ; (*This axis is for controlling the Cutter axis*)
+END_VAR
