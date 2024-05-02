@@ -4,12 +4,16 @@ TYPE
 	CutterCmd_Typ : 	STRUCT  (*Structure for giving command to cutter section*)
 		bStart : BOOL; (*Start command*)
 		bStop : BOOL; (*Stop command*)
-		bHome : BOOL; (*Home Command*)
+		bHomePos : BOOL; (*Command for finding home position*)
+		bHome : BOOL; (*Command for homing of cutter axis*)
 	END_STRUCT;
 	CutterPara_Typ : 	STRUCT  (*Structure for giving the parameters to cutter section*)
 		homeVelocity : REAL; (*Homing velocity*)
 		homeAccel : REAL; (*Homing acceleration*)
 		homeDecel : USINT; (*Homing deceleration*)
+		homePositiveTol : UINT; (*Tolerance for homing in positive direction*)
+		homeNegativeTol : UINT; (*Tolerance for homing in negative direction*)
+		homeOffset : UINT; (*Offset for homing*)
 	END_STRUCT;
 	CutterStatus_Typ : 	STRUCT  (*Strcuture for showing the status of the cutter section*)
 		New_Member : USINT;

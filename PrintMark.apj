@@ -10,5 +10,6 @@
   <TechnologyPackages>
     <Acp10Arnc0 Version="5.24.1" />
     <mapp Version="5.24.2" />
+    <mappView Version="5.24.1" />
   </TechnologyPackages>
 </Project>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="BeltConveyor">
+      <tuv xml:lang="en">
+        <seg>BELT CONVEYOR</seg>
+      </tuv>
+    </tu>
+    <tu tuid="On">
+      <tuv xml:lang="en">
+        <seg>ON</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Home">
+      <tuv xml:lang="en">
+        <seg>HOME</seg>
+      </tuv>
+    </tu>
+    <tu tuid="JogPositive">
+      <tuv xml:lang="en">
+        <seg>JOG POSITIVE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="JogNegative">
+      <tuv xml:lang="en">
+        <seg>JOG NEGATIVE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Commands">
+      <tuv xml:lang="en">
+        <seg>COMMANDS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PowerOn">
+      <tuv xml:lang="en">
+        <seg>POWER ON</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters">
+      <tuv xml:lang="en">
+        <seg>PARAMETERS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="JogVelocity">
+      <tuv xml:lang="en">
+        <seg>JOG VELOCITY</seg>
+      </tuv>
+    </tu>
+    <tu tuid="JogAcceleration">
+      <tuv xml:lang="en">
+        <seg>JOG ACCELERATION</seg>
+      </tuv>
+    </tu>
+    <tu tuid="JogDeceleration">
+      <tuv xml:lang="en">
+        <seg>JOG DECELERATION</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CutterAxis">
+      <tuv xml:lang="en">
+        <seg>CUTTER AXIS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HomeOffset">
+      <tuv xml:lang="en">
+        <seg>HOME OFFSET</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ErrorReset">
+      <tuv xml:lang="en">
+        <seg>ERROR RESET</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Reset">
+      <tuv xml:lang="en">
+        <seg>RESET</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Logo_S2.png</Object>
+    <Object Type="File">Logo_S3.png</Object>
+    <Object Type="File">Logo_S4.png</Object>
+    <Object Type="File">system-regular-37-compress.svg</Object>
+    <Object Type="File">JB_PullerWhite_32x32.png</Object>
+    <Object Type="File">Red.png</Object>
+    <Object Type="File">Yellow.png</Object>
+    <Object Type="File">Jb_AxisSyncOrgange_32x32.png</Object>
+    <Object Type="File">Green.png</Object>
+    <Object Type="File">Grey.png</Object>
+    <Object Type="File">Home.png</Object>
+    <Object Type="File">HomedNot.png</Object>
+    <Object Type="File">Jb_IndicationOrange_32x32.png</Object>
+    <Object Type="File">icons8-screen-100.png</Object>
+    <Object Type="File">DO.png</Object>
+    <Object Type="File">AI.png</Object>
+    <Object Type="File">AO.png</Object>
+    <Object Type="File">DI.png</Object>
+    <Object Type="File">wcs.png</Object>
+    <Object Type="File">Background_Blue.png</Object>
+    <Object Type="File">soft-blue-baby-gradation-blur-29-wallpaper.jpg</Object>
+    <Object Type="File">Layout.png</Object>
+    <Object Type="File">agt_stop.png</Object>
+    <Object Type="File">apply.png</Object>
+    <Object Type="File">cancel.png</Object>
+    <Object Type="File">211775_minus_icon.svg</Object>
+    <Object Type="File">211600_plus_circled_icon.svg</Object>
+    <Object Type="File">211862_minus_circled_icon.svg</Object>
+    <Object Type="File">Gray-abstract-wireframe-technology-background.jpg</Object>
+    <Object Type="File">icegif-1262-unscreen.gif</Object>
+    <Object Type="File">Error.gif</Object>
+    <Object Type="File">McRun.gif</Object>
+    <Object Type="File">wired-flat-134-target.gif</Object>
+    <Object Type="File">wired-flat-1140-error.gif</Object>
+    <Object Type="File">McIdle.gif</Object>
+    <Object Type="File">wired-flat-37-approve-checked-simple.gif</Object>
+    <Object Type="File">full-battery.png</Object>
+    <Object Type="File">low-battery.png</Object>
+    <Object Type="File">MpAxis_Warning.png</Object>
+    <Object Type="File">MpAxis_Alarm.png</Object>
+    <Object Type="File">AxisPowerOff.png</Object>
+    <Object Type="File">AxisPowerOn.png</Object>
+    <Object Type="File">McHome.gif</Object>
+    <Object Type="File">HDLogo3.png</Object>
+    <Object Type="File">LedGreenBig.png</Object>
+    <Object Type="File">LedRedSmall.png</Object>
+    <Object Type="File">LedGreenSmall.png</Object>
+    <Object Type="File">LedRedBig.png</Object>
+  </Objects>
+</Package>

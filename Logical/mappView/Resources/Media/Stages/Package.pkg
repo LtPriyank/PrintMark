@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Stage-3.PNG</Object>
+    <Object Type="File">Stage-4.PNG</Object>
+    <Object Type="File">Stage_1.PNG</Object>
+    <Object Type="File">Stage_2.PNG</Object>
+    <Object Type="File">Stage_5.PNG</Object>
+    <Object Type="File">Stage_6.PNG</Object>
+    <Object Type="File">cap.png</Object>
+    <Object Type="File">Cap2.png</Object>
+    <Object Type="File">Cap3.png</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="CapAlarmContent" height="940" width="2180" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.GroupBox" id="Alarm_GroupBox" top="20" left="40" width="2100" height="900" zIndex="0" text="ALARMS" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(64, 64, 64, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(255, 255, 255, 1)" fontSize="25px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.AlarmList" id="CapProcessAlarmList" top="14" left="19" width="2063" height="666" zIndex="0" itemsPerPage="10" headerBackColor="rgba(211, 211, 211, 1)" headerTextColor="rgba(0, 0, 0, 1)" fontSize="20px" headerCellBorderColor="rgba(64, 64, 64, 1)" headerCellBorderStyle="solid">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.AlarmListItem" id="instanceIDAlarmList" zIndex="0" columnType="instanceId" text="ID" />
+            <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmMessageList" width="1360" zIndex="1" text="MESSAGE" />
+            <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmNameList" width="260" zIndex="2" columnType="name" text="ALARM NAME" />
+            <Widget xsi:type="widgets.brease.AlarmListItem" id="TimeStampList" width="240" zIndex="3" columnType="timestamp" text="TIMESTAMP" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.Button" id="AlarmAcknowledgeButton" top="734" left="19" width="325" height="68" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="AKNOWLEDGMENT" borderWidth="1px" cornerRadius="5px" backColor="rgba(211, 211, 211, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Button" id="AlarmAcknowledgeAll_Button" top="733" left="398" width="325" height="68" zIndex="2" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="AKNOWLEDGMENT ALL" borderWidth="1px" cornerRadius="5px" backColor="rgba(211, 211, 211, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="AlarmErrorReset_Button" top="733" left="779" width="325" height="68" zIndex="3" image="Media/SymbolLib/Symbols/Reset.svg" text="ALARM ERROR RESET" borderWidth="1px" cornerRadius="5px" backColor="rgba(211, 211, 211, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

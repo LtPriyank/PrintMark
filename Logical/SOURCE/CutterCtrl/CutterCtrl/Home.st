@@ -2,31 +2,24 @@
 ACTION Home:
 	
 	CASE enCutterHomeSteps OF
-		HOME_IDLE:
+		HOME_IDLE: //Idle state for homing
 			IF((gAx_Cutter.Out.PowerOn = TRUE) AND (gAx_Cutter.Out.Error = FALSE))THEN
 				enCutterHomeSteps := HOME_STARTING;
 			END_IF;
 		
-		HOME_STARTING:
+		HOME_STARTING: //Starting command for the homing
 			gAx_Cutter.In.Parameters.Home.Mode := mcHOME_DIRECT;
 			gAx_Cutter.In.Parameters.Home.ReferencePulse := mpAXIS_HOME_OPTION_ON;
 			gAx_Cutter.In.Parameters.Home.HomingVelocity := cutCtrl.Para.homeVelocity;
 			gAx_Cutter.In.Parameters.Home.Acceleration := cutCtrl.Para.homeVelocity * K_CUT_ACC_FACTOR;
-			IF((gAx_Cutter.Out.Position < 1600))THEN
-				gAx_Cutter.In.Parameters.Home.HomingDirection := mpAXIS_HOME_DIR_NEGATIVE;
-			ELSIF((gAx_Cutter.Out.Position > 2000))THEN
-				gAx_Cutter.In.Parameters.Home.HomingDirection := mpAXIS_HOME_DIR_POSITIVE;
-			ELSIF(((gAx_Cutter.Out.Position > 1600))AND((gAx_Cutter.Out.Position < 2000)))THEN
-				cutCtrl.Cmd.bHome := FALSE;
-			END_IF;
-			IF(cutCtrl.Cmd.bHome = TRUE)THEN
+			IF(cutCtrl.Cmd.bHomePos = TRUE)THEN
 				gAx_Cutter.In.Home := TRUE;
 				IF(gAx_Cutter.Out.Position = K_ZERO)THEN
 					enCutterHomeSteps := HOME_EXECUTE;
 				END_IF;
 			END_IF;
 			
-		HOME_EXECUTE:
+		HOME_EXECUTE: //Exexuting homing for the axis
 			gAx_Cutter.In.Home := FALSE;
 			gAx_Cutter.In.Parameters.Velocity := cutCtrl.Para.homeVelocity;
 			gAx_Cutter.In.Parameters.Acceleration := cutCtrl.Para.homeVelocity * K_CUT_ACC_FACTOR;
@@ -41,13 +34,13 @@ ACTION Home:
 				enCutterHomeSteps := HOME_STOPPING;
 			END_IF;
 			
-		HOME_STOPPING:
+		HOME_STOPPING: //Homing is being stopped
 			gAx_Cutter.In.Home := TRUE;
 			IF(gAx_Cutter.Out.Position = K_ZERO)THEN
 				enCutterHomeSteps := HOME_STOPPED;
 			END_IF;
 		
-		HOME_STOPPED:
+		HOME_STOPPED: //Homing is stopped
 			gAx_Cutter.In.Home := FALSE;
 			IF(gAx_Cutter.Out.Velocity = K_ZERO)THEN
 				enCutterHomeSteps := HOME_IDLE;

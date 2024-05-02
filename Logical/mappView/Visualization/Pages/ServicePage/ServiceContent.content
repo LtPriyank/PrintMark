@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ServiceContent" height="940" width="2180" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.GroupBox" id="SDM_GroupBox" top="20" left="20" width="2140" height="900" zIndex="0" text="SDM" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(64, 64, 64, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(255, 255, 255, 1)" fontSize="25px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.WebViewer" id="SDM_WebViewer" top="20" left="19" width="2102" height="820" zIndex="0" borderStyle="none" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

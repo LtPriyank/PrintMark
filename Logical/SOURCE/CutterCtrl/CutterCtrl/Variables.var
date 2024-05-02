@@ -21,4 +21,6 @@ VAR CONSTANT
 	K_CUTTER_ANGLE : UINT := 360; (*constant for cutter disc angle*)
 	K_CORRECTION : UINT := 60; (*constant for homing position correction*)
 	K_ZERO : UINT := 0; (*constant for zero value*)
+	K_HOME_POS_TOL : UINT := 200; (*constant for positive tolerance for homing*)
+	K_HOME_NEG_TOL : UINT := 200; (*constant for negative tolerance for homing*)
 END_VAR
