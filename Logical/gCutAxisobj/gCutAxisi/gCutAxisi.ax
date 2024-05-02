@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.12.2.93?>
 <InitParameter Version="5.24.1" NcSwId="ACP10">
   <Group ID="ACP10AXIS_typ">
     <Group ID="dig_in">
@@ -12,10 +13,10 @@
     </Group>
     <Group ID="encoder_if">
       <Group ID="parameter">
-        <Parameter ID="count_dir" Value="ncSTANDARD" />
+        <Parameter ID="count_dir" Value="ncINVERSE" />
         <Group ID="scaling">
           <Group ID="load">
-            <Parameter ID="units" Value="1000" />
+            <Parameter ID="units" Value="3600" />
             <Parameter ID="rev_motor" Value="1" />
           </Group>
         </Group>
@@ -43,7 +44,7 @@
     <Group ID="controller">
       <Parameter ID="mode" Value="ncPOSITION" />
       <Group ID="position">
-        <Parameter ID="kv" Value="358.0" />
+        <Parameter ID="kv" Value="311.0" />
         <Parameter ID="tn" Value="0.0" />
         <Parameter ID="t_predict" Value="0.0004" />
         <Parameter ID="t_total" Value="0.0004" />
@@ -51,7 +52,7 @@
         <Parameter ID="i_max" Value="0.0" />
       </Group>
       <Group ID="speed">
-        <Parameter ID="kv" Value="0.9" />
+        <Parameter ID="kv" Value="0.7" />
         <Parameter ID="tn" Value="0.0" />
         <Parameter ID="t_filter" Value="0.0" />
         <Group ID="isq_filter1">
@@ -156,7 +157,7 @@
           <Parameter ID="edge_sw" Value="ncPOSITIVE" />
           <Parameter ID="start_dir" Value="ncPOSITIVE" />
           <Parameter ID="trigg_dir" Value="ncPOSITIVE" />
-          <Parameter ID="ref_pulse" Value="ncOFF" />
+          <Parameter ID="ref_pulse" Value="ncON" />
           <Parameter ID="fix_dir" Value="ncOFF" />
           <Parameter ID="tr_s_block" Value="0.0" />
           <Parameter ID="torque_lim" Value="0.0" />

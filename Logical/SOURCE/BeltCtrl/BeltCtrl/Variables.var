@@ -6,3 +6,12 @@ END_VAR
 VAR
 	enBeltManualSteps : enBeltManualMode; (*Enumeration type variable for manual mode*)
 END_VAR
+(*Variable for belt unit control*)
+VAR
+	beltCtrl : BeltCtrl_Typ; (*Variable of Belt ctrl type*)
+END_VAR
+(*Constants*)
+VAR CONSTANT
+	K_JOG_ACC_FACTOR : UINT := 10; (*Constant for giving jog acceleration*)
+	K_JOG_DEC_FACTOR : UINT := 10; (*Constant for giving jog decelaration*)
+END_VAR

@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.12.2.93?>
 <InitParameter Version="5.24.1" NcSwId="ACP10">
   <Group ID="ACP10AXIS_typ">
     <Group ID="dig_in">
@@ -15,7 +16,7 @@
         <Parameter ID="count_dir" Value="ncSTANDARD" />
         <Group ID="scaling">
           <Group ID="load">
-            <Parameter ID="units" Value="1000" />
+            <Parameter ID="units" Value="3600" />
             <Parameter ID="rev_motor" Value="1" />
           </Group>
         </Group>

@@ -1,3 +1,4 @@
+(*Structure for axis control*)
 
 TYPE
 	AxisBasicIn_type : 	STRUCT  (*Axis Basic inputs structure type*)
@@ -69,5 +70,34 @@ TYPE
 	AxisCamSeq_type : 	STRUCT  (*Axis cam sequencing type*)
 		In : AxisCamSeqIn_type;
 		Out : AxisCamSeqOut_type;
+	END_STRUCT;
+END_TYPE
+
+(*Structure for machine control*)
+
+TYPE
+	PrintCmd_Typ : 	STRUCT 
+		Start : USINT;
+		Stop : USINT;
+		JogPositive : USINT;
+		JogNegative : USINT;
+	END_STRUCT;
+	PrintStatus_Typ : 	STRUCT  (*Structure for showing the status of the machine*)
+		New_Member : USINT;
+	END_STRUCT;
+	PrintIn_Typ : 	STRUCT  (*Structure for Inputs of the machine*)
+		New_Member : USINT;
+	END_STRUCT;
+	PrintOut_Typ : 	STRUCT  (*Structure for outputs of the machine*)
+		New_Member : USINT;
+	END_STRUCT;
+	PrintIO_Typ : 	STRUCT  (*Structure for IO's of the machine*)
+		Input : PrintIn_Typ;
+		Output : PrintOut_Typ;
+	END_STRUCT;
+	PrintCtrl_Typ : 	STRUCT  (*Structure of controlling the machine operation*)
+		Cmd : PrintCmd_Typ; (*Machine command type variable*)
+		Status : PrintStatus_Typ; (*Machine status type variable*)
+		IO : PrintIO_Typ; (*Machine IO type variable*)
 	END_STRUCT;
 END_TYPE

@@ -3,7 +3,7 @@
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
     <Task Name="BeltCtrl" Source="SOURCE.BeltCtrl.BeltCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="CutterCtr1" Source="SOURCE.CutterCtrl.CutterCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="CutterCtrl" Source="SOURCE.CutterCtrl.CutterCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
@@ -52,5 +52,6 @@
     <LibraryObject Name="MpCom" Source="Libraries.MpCom.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="fileio" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="standard" Source="Libraries.standard.lby" Memory="UserROM" Language="binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

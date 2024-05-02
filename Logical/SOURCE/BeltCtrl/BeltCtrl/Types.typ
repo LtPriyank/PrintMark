@@ -6,7 +6,9 @@ TYPE
 		bStop : BOOL; (*Stop command*)
 	END_STRUCT;
 	BeltPara_Typ : 	STRUCT  (*Structure for giving the parameters to belt conveyor section*)
-		New_Member : USINT;
+		jogSpeed : REAL; (*For giving jog speed to the belt unit*)
+		jogUpperLimit : LREAL; (*For giving jog upper limit to the belt unit*)
+		jogLowerLimit : LREAL; (*For giving jog lower limit to the belt unit*)
 	END_STRUCT;
 	BeltStatus_Typ : 	STRUCT  (*Strcuture for showing the status of the belt conveyor section*)
 		New_Member : USINT;

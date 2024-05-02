@@ -1,3 +1,24 @@
+(*MpAxisBasic type variable*)
 VAR
 	iFb_MpAxisBasic : MpAxisBasic; (*Cutter Mp Axis Basic Variable*)
+END_VAR
+(*Enumeration variable*)
+VAR
+	enCutterHomeSteps : enCutterHomeMode; (*Enumeration type variable for homing*)
+END_VAR
+(*Cutting unit ctrl*)
+VAR
+	cutCtrl : CutterCtrl_Typ; (*Variable of Cutter control type*)
+	cutHomePostion : REAL; (*Home postition for cutter axis*)
+END_VAR
+(*Constants*)
+VAR CONSTANT
+	K_CUT_ACC_FACTOR : UINT := 10; (*constant for cutting axis acceleration*)
+	K_CUT_DEC_FACTOR : UINT := 10; (*constant for cutting axis deceleration*)
+	K_UNIT_PER_REV : UINT := 3600; (*constant for cut axis units per revolution*)
+	K_QUARTER : UINT := 4; (*constant for quarter value*)
+	K_HALF : UINT := 2; (*constant for half value*)
+	K_CUTTER_ANGLE : UINT := 360; (*constant for cutter disc angle*)
+	K_CORRECTION : UINT := 60; (*constant for homing position correction*)
+	K_ZERO : UINT := 0; (*constant for zero value*)
 END_VAR
