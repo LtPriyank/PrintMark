@@ -1,10 +1,12 @@
 (*MpAxisBasic type variable*)
 VAR
 	iFb_MpAxisBasic : MpAxisBasic; (*Belt Mp Axis Basic Variable*)
+	iFb_MC_BR_SetHardwareInputs : MC_BR_SetHardwareInputs;
 END_VAR
 (*Enumeration variable*)
 VAR
 	enBeltManualSteps : enBeltManualMode; (*Enumeration type variable for manual mode*)
+	enBeltHomeSteps : enBeltHomeMode; (*Enumeration type variable for homing*)
 END_VAR
 (*Variable for belt unit control*)
 VAR
@@ -12,6 +14,16 @@ VAR
 END_VAR
 (*Constants*)
 VAR CONSTANT
-	K_JOG_ACC_FACTOR : UINT := 10; (*Constant for giving jog acceleration*)
-	K_JOG_DEC_FACTOR : UINT := 10; (*Constant for giving jog decelaration*)
+	K_BELT_ACC_FACTOR : UINT := 10; (*Constant for giving  acceleration*)
+	K_BELT_DEC_FACTOR : UINT := 10; (*Constant for giving  decelaration*)
+	K_UNIT_PER_REV : UINT := 3600; (*constant for belt axis units per revolution*)
+	K_QUARTER : UINT := 4; (*constant for quarter value*)
+	K_HALF : UINT := 2; (*constant for half value*)
+	K_CORRECTION : UINT := 60; (*constant for homing position correction*)
+	K_ZERO : UINT := 0; (*constant for zero value*)
+	K_HOME_POS_OFFSET : UINT := 8; (*constant for home offset*)
+END_VAR
+VAR
+	negAbort : BOOL;
+	R_TRIG_0 : R_TRIG;
 END_VAR

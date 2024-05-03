@@ -7,5 +7,6 @@
     <File Description="Local variables" Private="true">Variables.var</File>
     <File>AxisIOMap.st</File>
     <File>Manual.st</File>
+    <File>Homing.st</File>
   </Files>
 </Program>

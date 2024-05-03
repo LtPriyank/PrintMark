@@ -23,4 +23,7 @@ VAR CONSTANT
 	K_ZERO : UINT := 0; (*constant for zero value*)
 	K_HOME_POS_TOL : UINT := 200; (*constant for positive tolerance for homing*)
 	K_HOME_NEG_TOL : UINT := 200; (*constant for negative tolerance for homing*)
+	K_HOME_POS_OFFSET : UINT := 8; (*constant for home offset*)
+	K_HOME_LOW_RANGE : UINT := 420; (*Lower range for finding home position*)
+	K_HOME_UP_RANGE : UINT := 1140; (*Upper range for finding home position*)
 END_VAR

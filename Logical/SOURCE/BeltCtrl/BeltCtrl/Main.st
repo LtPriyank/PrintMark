@@ -1,13 +1,18 @@
 
 PROGRAM _INIT
-	(* Insert code here *)
-	 
+	beltCtrl.Para.homeVelocity := 100;
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
 	//Calling Belt Axis IO mapping file
 	AxisIOMap;
+	
+	//Calling Belt Axis Homing file
+	Homing;
+	
+	//Calling Belt Axis manual operation
+	Manual;
 	
 
 	 

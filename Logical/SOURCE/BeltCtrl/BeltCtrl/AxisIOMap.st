@@ -43,5 +43,11 @@ ACTION AxisIOMap:
 	gAx_BeltConveyor.Out.BrakeReleased  := iFb_MpAxisBasic.BrakeReleased;
 	gAx_BeltConveyor.Out.Info           := iFb_MpAxisBasic.Info;
 	
+	//For homing of Belt conveyor
+	iFb_MC_BR_SetHardwareInputs.Enable := TRUE;
+	iFb_MC_BR_SetHardwareInputs.Axis := ADR(gBeltAxis);
+	iFb_MC_BR_SetHardwareInputs.HomeSwitch := gAx_Cutter.Out.Info.DigitalInputsStatus.Trigger1;
+	iFb_MC_BR_SetHardwareInputs();
+	
 
 END_ACTION
