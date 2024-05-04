@@ -17,7 +17,7 @@ PROGRAM _CYCLIC
 	gAx_Cutter.In.Power := gPrintMarkHMI.Cmd.bCutterPowerOn;
 	gAx_Cutter.In.ErrorReset := gPrintMarkHMI.Cmd.bCutterErrorReset;
 	IF((gAx_Cutter.Out.IsHomed = TRUE) AND (gAx_Cutter.Out.Position = K_ZERO))THEN
-		gPrintMarkHMI.Cmd.bBeltHome := FALSE;
+		gPrintMarkHMI.Cmd.bCutterHome := FALSE;
 	END_IF;
 	
 	

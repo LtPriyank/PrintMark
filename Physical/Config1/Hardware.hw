@@ -59,7 +59,6 @@
       <Parameter ID="CycleTime" Value="400" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="PrintMark_Config1" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="X20CP1584.IF3" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />

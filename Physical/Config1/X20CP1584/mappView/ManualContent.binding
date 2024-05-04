@@ -73,10 +73,7 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_BeltConveyor.Out.IsHomed" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="BeltIsHomed_Image" attribute="visible" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_BeltConveyor.Out.PowerOn" attribute="value" />
-<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="BeltAxisPower_Lamp" attribute="visible" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Cutter.Out.Error" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="CutterAxisError_Image" attribute="visible" />
@@ -88,6 +85,10 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Cutter.Out.PowerOn" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="CutterPower_Lamp" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_BeltConveyor.Out.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="BeltAxisPower_Lamp" attribute="selectedIndex" />
 </Binding>
 </Bindings>
 </BindingsSet>

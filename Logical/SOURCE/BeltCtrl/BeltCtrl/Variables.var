@@ -25,9 +25,8 @@ VAR CONSTANT
 	K_HOME_POS_OFFSET : UINT := 8; (*constant for home offset*)
 	K_HOME_VEL_INIT : REAL := 100; (*Homing velocuty *)
 	K_JOG_NEG_LIMIT : REAL := 300; (*Negative limit while negative jog*)
-END_VAR
-VAR
 	K_PERIOD : UINT := 3600; (*Period of belt axis motion*)
+	K_HALF_PERIOD : UINT := 1800; (*Half period of belt axis motion*)
 END_VAR
 (*FB Types *)
 VAR

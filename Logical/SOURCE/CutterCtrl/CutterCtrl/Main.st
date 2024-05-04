@@ -20,6 +20,7 @@ PROGRAM _CYCLIC
 	END_IF;
 	
 	//Manual command for Cutter axis
+	Manual;
 	cutCtrl.Para.jogSpeed := gPrintMarkHMI.Para.cutterJogSpeed;
 	cutCtrl.Cmd.bJogPositive := gPrintMarkHMI.Cmd.bCutterJogPositive;
 	cutCtrl.Cmd.bJogNegative := gPrintMarkHMI.Cmd.bCutterJogNegative;

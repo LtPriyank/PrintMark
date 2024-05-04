@@ -17,6 +17,8 @@ TYPE
 		homeNegativeTol : UINT; (*Tolerance for homing in negative direction*)
 		homeOffset : UINT; (*Offset for homing*)
 		jogSpeed : REAL; (*Cutter axis jog velocity*)
+		jogUpperLimit : REAL; (*Cutter axis jog upper limit*)
+		jogLowerLimit : REAL; (*Cutter axis jog lower limit*)
 	END_STRUCT;
 	CutterStatus_Typ : 	STRUCT  (*Strcuture for showing the status of the cutter section*)
 		bHomePosFound : BOOL; (*Status for home position found*)
@@ -33,11 +35,17 @@ END_TYPE
 
 TYPE
 	enCutterHomeMode : 
-		(
+		( (*Enumeration for cutter homing state machine*)
 		HOME_IDLE, (*Idle state in manual mode*)
 		HOME_STARTING, (*Starting state in manual mode*)
 		HOME_EXECUTE, (*Execute state in manual mode*)
 		HOME_STOPPING, (*Stopping state in manual mode*)
 		HOME_STOPPED (*Stopped state in manual mode*)
+		);
+	enCutterManualMode : 
+		( (*Enumeration for cutter manual mode state machine*)
+		IDLE, (*Idle state in manual mode*)
+		STARTING, (*Starting state in manual mode*)
+		EXECUTE (*Execute state in manual mode*)
 		);
 END_TYPE

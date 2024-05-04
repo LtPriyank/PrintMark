@@ -10,8 +10,8 @@ TYPE
 	END_STRUCT;
 	BeltPara_Typ : 	STRUCT  (*Structure for giving the parameters to belt conveyor section*)
 		jogSpeed : REAL; (*For giving jog speed to the belt unit*)
-		jogUpperLimit : LREAL; (*For giving jog upper limit to the belt unit*)
-		jogLowerLimit : LREAL; (*For giving jog lower limit to the belt unit*)
+		jogUpperLimit : REAL; (*For giving jog upper limit to the belt unit*)
+		jogLowerLimit : REAL; (*For giving jog lower limit to the belt unit*)
 		homeVelocity : REAL; (*Homing velocity*)
 		homeAccel : REAL; (*Homing acceleration*)
 		homeDecel : REAL; (*Homing deceleration*)

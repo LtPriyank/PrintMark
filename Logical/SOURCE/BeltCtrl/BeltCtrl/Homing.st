@@ -21,8 +21,7 @@ ACTION Homing:
 			END_IF;
 
 		HOME_STOPPING: //Homing is being stopped
-			IF((gAx_BeltConveyor.Out.Position < (K_ZERO+K_HOME_POS_OFFSET))
-				OR(gAx_BeltConveyor.Out.Position > (K_UNIT_PER_REV-K_HOME_POS_OFFSET)))THEN
+			IF(gAx_BeltConveyor.Out.IsHomed = TRUE)THEN
 				enBeltHomeSteps := HOME_STOPPED;
 			END_IF;
 		

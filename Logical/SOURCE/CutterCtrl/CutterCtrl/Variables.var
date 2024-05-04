@@ -5,6 +5,7 @@ END_VAR
 (*Enumeration variable*)
 VAR
 	enCutterHomeSteps : enCutterHomeMode; (*Enumeration type variable for homing*)
+	enCutterManualSteps : enCutterManualMode; (*Enumeration type variable for manual operation*)
 END_VAR
 (*Cutting unit ctrl*)
 VAR
@@ -27,4 +28,5 @@ VAR CONSTANT
 	K_HOME_LOW_RANGE : UINT := 420; (*Lower range for finding home position*)
 	K_HOME_UP_RANGE : UINT := 1140; (*Upper range for finding home position*)
 	K_HOME_VEL_INIT : REAL := 100; (*Homing velocuty *)
+	K_ONE : UINT := 1; (*Constant value 1*)
 END_VAR

@@ -8,5 +8,6 @@
     <File>AxisIOMap.st</File>
     <File>HomePos.st</File>
     <File>Homing.st</File>
+    <File>Manual.st</File>
   </Files>
 </Program>
