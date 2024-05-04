@@ -4,5 +4,8 @@
   <Objects>
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="File">Visualizat.vis</Object>
+    <Object Type="File">ManualContent.binding</Object>
+    <Object Type="File">CapAlarmContent.eventbinding</Object>
+    <Object Type="File">PrintAlarmContent.eventbinding</Object>
   </Objects>
 </Package>

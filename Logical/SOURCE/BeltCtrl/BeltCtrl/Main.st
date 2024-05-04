@@ -1,6 +1,6 @@
 
 PROGRAM _INIT
-	beltCtrl.Para.homeVelocity := 100;
+	beltCtrl.Para.homeVelocity := K_HOME_VEL_INIT;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -9,9 +9,13 @@ PROGRAM _CYCLIC
 	AxisIOMap;
 	
 	//Calling Belt Axis Homing file
+	beltCtrl.Cmd.bHome := gPrintMarkHMI.Cmd.bBeltHome;
 	Homing;
 	
 	//Calling Belt Axis manual operation
+	beltCtrl.Para.jogSpeed := gPrintMarkHMI.Para.beltJogSpeed;
+	beltCtrl.Cmd.bJogPositive := gPrintMarkHMI.Cmd.bBeltJogPositive;
+	beltCtrl.Cmd.bJogNegative := gPrintMarkHMI.Cmd.bBeltJogNegative;
 	Manual;
 	
 

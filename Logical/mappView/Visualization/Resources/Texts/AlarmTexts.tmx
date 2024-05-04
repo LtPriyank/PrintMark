@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="Acknowledgment">
+      <tuv xml:lang="en">
+        <seg>ACKNOWLEDGMENT</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmName">
+      <tuv xml:lang="en">
+        <seg>ALARM NAME</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ID">
+      <tuv xml:lang="en">
+        <seg>ID</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Message">
+      <tuv xml:lang="en">
+        <seg>MESSAGE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Scope">
+      <tuv xml:lang="en">
+        <seg>SCOPE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TimeStamp">
+      <tuv xml:lang="en">
+        <seg>TIMESTAMP</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AcknowledgeAll">
+      <tuv xml:lang="en">
+        <seg>ACKNOWLEDGE ALL</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm">
+      <tuv xml:lang="en">
+        <seg>ALARM</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

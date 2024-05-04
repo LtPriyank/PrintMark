@@ -11,19 +11,25 @@ END_VAR
 (*Variable for belt unit control*)
 VAR
 	beltCtrl : BeltCtrl_Typ; (*Variable of Belt ctrl type*)
+	negLimitAbort : BOOL; (*Variable for aborting negative belt jog*)
 END_VAR
 (*Constants*)
 VAR CONSTANT
 	K_BELT_ACC_FACTOR : UINT := 10; (*Constant for giving  acceleration*)
 	K_BELT_DEC_FACTOR : UINT := 10; (*Constant for giving  decelaration*)
-	K_UNIT_PER_REV : UINT := 3600; (*constant for belt axis units per revolution*)
+	K_UNIT_PER_REV : UINT := 1600; (*constant for belt axis units per revolution*)
 	K_QUARTER : UINT := 4; (*constant for quarter value*)
 	K_HALF : UINT := 2; (*constant for half value*)
 	K_CORRECTION : UINT := 60; (*constant for homing position correction*)
 	K_ZERO : UINT := 0; (*constant for zero value*)
 	K_HOME_POS_OFFSET : UINT := 8; (*constant for home offset*)
+	K_HOME_VEL_INIT : REAL := 100; (*Homing velocuty *)
+	K_JOG_NEG_LIMIT : REAL := 300; (*Negative limit while negative jog*)
 END_VAR
 VAR
-	negAbort : BOOL;
-	R_TRIG_0 : R_TRIG;
+	K_PERIOD : UINT := 3600; (*Period of belt axis motion*)
+END_VAR
+(*FB Types *)
+VAR
+	iFb_RtrigBeltJog : R_TRIG; (*R_Trig FB type variable*)
 END_VAR

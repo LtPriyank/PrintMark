@@ -7,7 +7,6 @@
     <Object Type="Package">ManualPage</Object>
     <Object Type="Package">AutomaticPage</Object>
     <Object Type="Package">AlarmPage</Object>
-    <Object Type="Package">RecipePage</Object>
     <Object Type="Package">ServicePage</Object>
   </Objects>
 </Package>

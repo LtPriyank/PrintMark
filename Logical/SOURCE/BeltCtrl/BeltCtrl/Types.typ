@@ -34,10 +34,7 @@ TYPE
 		IDLE, (*Idle state in manual mode*)
 		STARTING, (*Starting state in manual mode*)
 		EXECUTE, (*Execute state in manual mode*)
-		STOPPING, (*Stopping state in manual mode*)
-		STOPPED, (*Stopped state in manual mode*)
-		ABORTING, (*Aborting state in manual mode*)
-		ABORTED (*Aborted state in manual mode*)
+		ABORTING (*Aborting state in manual mode*)
 		);
 	enBeltHomeMode : 
 		( (*Enumeration for homing of belt axis*)

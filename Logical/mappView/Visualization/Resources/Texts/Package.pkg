@@ -5,5 +5,6 @@
     <Object Type="File">Project.language</Object>
     <Object Type="File">ManualScreenTexts.tmx</Object>
     <Object Type="File">NavigationScreenTexts.tmx</Object>
+    <Object Type="File">AlarmTexts.tmx</Object>
   </Objects>
 </Package>

@@ -26,4 +26,5 @@ VAR CONSTANT
 	K_HOME_POS_OFFSET : UINT := 8; (*constant for home offset*)
 	K_HOME_LOW_RANGE : UINT := 420; (*Lower range for finding home position*)
 	K_HOME_UP_RANGE : UINT := 1140; (*Upper range for finding home position*)
+	K_HOME_VEL_INIT : REAL := 100; (*Homing velocuty *)
 END_VAR

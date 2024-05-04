@@ -6,6 +6,8 @@ TYPE
 		bStop : BOOL; (*Stop command*)
 		bHomePos : BOOL; (*Command for finding home position*)
 		bHome : BOOL; (*Command for homing of cutter axis*)
+		bJogPositive : BOOL; (*Command for cutter jog positive*)
+		bJogNegative : BOOL; (*Command for cutter jog negative*)
 	END_STRUCT;
 	CutterPara_Typ : 	STRUCT  (*Structure for giving the parameters to cutter section*)
 		homeVelocity : REAL; (*Homing velocity*)
@@ -14,6 +16,7 @@ TYPE
 		homePositiveTol : UINT; (*Tolerance for homing in positive direction*)
 		homeNegativeTol : UINT; (*Tolerance for homing in negative direction*)
 		homeOffset : UINT; (*Offset for homing*)
+		jogSpeed : REAL; (*Cutter axis jog velocity*)
 	END_STRUCT;
 	CutterStatus_Typ : 	STRUCT  (*Strcuture for showing the status of the cutter section*)
 		bHomePosFound : BOOL; (*Status for home position found*)

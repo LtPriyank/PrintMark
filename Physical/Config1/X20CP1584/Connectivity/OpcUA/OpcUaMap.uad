@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="B4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gPrintMarkHMI">
+          <Variable Name="Cmd" RecursiveEnable="2" />
+          <Variable Name="Status" RecursiveEnable="2" />
+          <Variable Name="Para" RecursiveEnable="2" />
+          <Variable Name="IO" RecursiveEnable="2" />
+        </Variable>
+        <Variable Name="gAx_BeltConveyor" RecursiveEnable="2" />
+        <Variable Name="gAx_Cutter" RecursiveEnable="2" />
+      </GlobalVariables>
+      <Task Name="VisCtrl">
+        <Variable Name="K_BELT_JOG_INIT" />
+        <Variable Name="K_CUTTER_JOG_INIT" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

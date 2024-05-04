@@ -9,4 +9,5 @@ END_VAR
 (*Global variable for machine control*)
 VAR
 	gPrintMark : PrintCtrl_Typ; (*Variable for Print mark machine control*)
+	gPrintMarkHMI : PrintCtrHMIl_Typ; (*Variable for Print mark visualization control*)
 END_VAR

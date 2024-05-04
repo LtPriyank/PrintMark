@@ -6,24 +6,27 @@
     <Page refId="AutoPage" />
     <Page refId="MainPage" />
     <Page refId="ManualPage" />
-    <Page refId="RecipePage" />
     <Page refId="ServicePage" />
   </Pages>
   <Navigations />
-  <BindingsSets />
-  <EventBindingsSets />
+  <BindingsSets>
+    <BindingsSet refId="ManualContent_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="CapAlarmContent_eventbinding" />
+    <EventBindingsSet refId="PrintAlarmContent_eventbinding" />
+  </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
   </Dialogs>
   <Contents>
     <Content refId="LoginContent" />
-    <Content refId="CapAlarmContent" />
+    <Content refId="PrintAlarmContent" />
     <Content refId="Navigation" />
     <Content refId="TopContent" />
     <Content refId="AutoContent" />
     <Content refId="MainContent" />
     <Content refId="ManualContent" />
-    <Content refId="RecipeContent" />
     <Content refId="ServiceContent" />
   </Contents>
   <SnippetsSets />
@@ -39,7 +42,7 @@
     <Configuration key="activityCount" value="false" />
     <Configuration key="zoom" value="true" />
     <Gestures>
-			<!--<SystemGesture1 touchPoints="2" />
+      <!--<SystemGesture1 touchPoints="2" />
 		  <SystemGesture2 touchPoints="2" />
 		  <SystemGesture3 touchPoints="2" />-->
     </Gestures>
