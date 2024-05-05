@@ -22,6 +22,7 @@ TYPE
 		cutterJogSpeed : REAL; (*Jog velocity for cutter axis*)
 		cutterJogAcc : REAL; (*Jog acceleration for cutter axis*)
 		cutterJogDecel : REAL; (*Jog deceleration for cutter axis*)
+		beltAnimationString : STRING[80]; (*Animation for belt conveyor*)
 	END_STRUCT;
 	PrintStatusHMI_Typ : 	STRUCT  (*Structure for showing the status of the machine*)
 		New_Member : USINT;

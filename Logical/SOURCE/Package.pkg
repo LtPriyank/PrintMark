@@ -5,6 +5,7 @@
     <Object Type="Package">MainCtrl</Object>
     <Object Type="Package">BeltCtrl</Object>
     <Object Type="Package">CutterCtrl</Object>
+    <Object Type="Package">RegMark</Object>
     <Object Type="Package">VisCtrl</Object>
   </Objects>
 </Package>

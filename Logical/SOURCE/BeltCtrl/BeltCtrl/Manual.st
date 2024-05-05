@@ -34,11 +34,12 @@ ACTION Manual:
 				END_IF;
 			END_IF;
 			IF(beltCtrl.Cmd.bJogPositive = TRUE)THEN
+				prohibitNegJog := FALSE;
 				gAx_BeltConveyor.In.JogPositive := TRUE;
 			ELSE
 				gAx_BeltConveyor.In.JogPositive := FALSE;
 			END_IF;
-			IF(beltCtrl.Cmd.bJogNegative = TRUE)THEN
+			IF((beltCtrl.Cmd.bJogNegative = TRUE) AND (prohibitNegJog = FALSE))THEN
 				IF(gAx_Cutter.Out.Info.DigitalInputsStatus.Trigger1 = FALSE)THEN
 					gAx_BeltConveyor.In.JogNegative := TRUE;
 					negLimitAbort := FALSE;
@@ -73,6 +74,7 @@ ACTION Manual:
 				END_IF;
 			END_IF;
 			IF(gAx_BeltConveyor.Out.Velocity = K_ZERO)THEN
+				prohibitNegJog := TRUE;
 				negLimitAbort := FALSE;
 				gAx_BeltConveyor.In.JogNegative := FALSE;
 				enBeltManualSteps := EXECUTE;

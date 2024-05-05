@@ -2,9 +2,11 @@
 VAR
 	gAx_BeltConveyor : AxisBasic_type; (*Master type varibale*)
 	gAx_Cutter : AxisBasic_type; (*Slave basic type variable*)
-	gAx_SlaveCam : AxisCamSeq_type := (0); (*Slave cam sequencing type variable*)
+	gAx_CutterCam : AxisCamSeq_type := (0); (*Slave cam sequencing type variable*)
 	gBeltAxis : ACP10AXIS_typ; (*This axis is for controlling the Belt axis*)
 	gCutAxis : ACP10AXIS_typ; (*This axis is for controlling the Cutter axis*)
+	gRegAdvancePara : MC_BR_ADV_RM2_REF; (*MC_BR_RegMarkCapture002 Adavnced parameter type variable*)
+	gRegConfigPara : MC_BR_CFG_RM2_REF; (*MC_BR_RegMarkCapture002 Configuration parameter type variable*)
 END_VAR
 (*Global variable for machine control*)
 VAR

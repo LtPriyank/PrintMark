@@ -12,6 +12,7 @@ END_VAR
 VAR
 	beltCtrl : BeltCtrl_Typ; (*Variable of Belt ctrl type*)
 	negLimitAbort : BOOL; (*Variable for aborting negative belt jog*)
+	prohibitNegJog : BOOL; (*Prohibiting negative jog*)
 END_VAR
 (*Constants*)
 VAR CONSTANT

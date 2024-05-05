@@ -4,11 +4,13 @@
   <TaskClass Name="Cyclic#1">
     <Task Name="BeltCtrl" Source="SOURCE.BeltCtrl.BeltCtrl.prg" Memory="UserROM" Description="This task is for controlling the belt conveyor" Language="IEC" Debugging="true" />
     <Task Name="CutterCtrl" Source="SOURCE.CutterCtrl.CutterCtrl.prg" Memory="UserROM" Description="This task is for controlling the cutter axis" Language="IEC" Debugging="true" />
+    <Task Name="RegMkCtrl" Source="SOURCE.RegMark.RegMkCtrl.prg" Memory="UserROM" Description="This task is for reg mark capture" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="VisCtrl" Source="SOURCE.VisCtrl.VisCtrl.prg" Memory="UserROM" Description="This task if for Hmi task control" Language="IEC" Debugging="true" />
+    <Task Name="MainCtrl" Source="SOURCE.MainCtrl.MainCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -44,6 +46,8 @@
     <BinaryObject Name="BeltConfig" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="CutConfig" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="PrintAlarm" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="PrintCom" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="Acp10man" Source="Libraries.Acp10man.lby" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -59,13 +63,15 @@
     <LibraryObject Name="MpAxis" Source="Libraries.MpAxis.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpCom" Source="MpCom.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="standard" Source="Libraries.standard.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpServer" Source="Libraries.MpServer.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MC_RegMa" Source="Libraries.MC_RegMa.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="fileio" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="MpServer" Source="Libraries.MpServer.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

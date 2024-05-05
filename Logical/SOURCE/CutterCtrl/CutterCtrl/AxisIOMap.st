@@ -22,7 +22,7 @@ ACTION AxisIOMap:
 	iFb_MpAxisBasic.ReleaseBrake := gAx_Cutter.In.ReleaseBrake;
 	iFb_MpAxisBasic();
 
-	//Slave Axis Basic Output
+	//Cutter axis Basic Output
 	gAx_Cutter.Out.Active         := iFb_MpAxisBasic.Active;
 	gAx_Cutter.Out.Error          := iFb_MpAxisBasic.Error;
 	gAx_Cutter.Out.StatusID       := iFb_MpAxisBasic.StatusID;
@@ -42,5 +42,27 @@ ACTION AxisIOMap:
 	gAx_Cutter.Out.TorqueLimited  := iFb_MpAxisBasic.TorqueLimited;
 	gAx_Cutter.Out.BrakeReleased  := iFb_MpAxisBasic.BrakeReleased;
 	gAx_Cutter.Out.Info           := iFb_MpAxisBasic.Info;
+	
+	//Cam Axis basic input parameters
+	iFb_MpAxisCaming.MpLink       := ADR(gMl_CutAxis);
+	iFb_MpAxisCaming.Enable       := TRUE;
+	iFb_MpAxisCaming.ErrorReset   := gAx_CutterCam.In.ErrorReset;
+	iFb_MpAxisCaming.Parameters   := ADR(gAx_CutterCam.In.Parameters);
+	iFb_MpAxisCaming.Update       := gAx_CutterCam.In.Update;
+	iFb_MpAxisCaming.MpLinkMaster := ADR(gMl_BeltAxis);
+	iFb_MpAxisCaming.Signal1      := gAx_CutterCam.In.Signal1;
+	iFb_MpAxisCaming.Signal2      := gAx_CutterCam.In.Signal2;
+	iFb_MpAxisCaming.Signal3      := gAx_CutterCam.In.Signal3;
+	iFb_MpAxisCaming.Signal4      := gAx_CutterCam.In.Signal4;
+	iFb_MpAxisCaming.StartSequence:= gAx_CutterCam.In.StartSequence;
+	iFb_MpAxisCaming.Continue     := gAx_CutterCam.In.Continue;
+	iFb_MpAxisCaming.EndSequence  := gAx_CutterCam.In.EndSequence;
+	
+	//Cam Axis basic output parameters
+	gAx_CutterCam.Out.InSync := iFb_MpAxisCaming.InSync;
+	gAx_CutterCam.Out.Error := iFb_MpAxisCaming.Error;
+	
+	//Calling Cam FB
+	iFb_MpAxisCaming();
 
 END_ACTION

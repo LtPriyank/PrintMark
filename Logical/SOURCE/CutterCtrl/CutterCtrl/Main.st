@@ -25,6 +25,9 @@ PROGRAM _CYCLIC
 	cutCtrl.Cmd.bJogPositive := gPrintMarkHMI.Cmd.bCutterJogPositive;
 	cutCtrl.Cmd.bJogNegative := gPrintMarkHMI.Cmd.bCutterJogNegative;
 	
+	//Cam Automat
+	Printcam;
+	
 	 
 END_PROGRAM
 

@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">PrintAlarm.mpalarmxcore</Object>
     <Object Type="File">PrintCom.mpcomgroup</Object>
+    <Object Type="File">PrintPack.mppackmlcore</Object>
   </Objects>
 </Package>

@@ -20,6 +20,7 @@ PROGRAM _CYCLIC
 		gPrintMarkHMI.Cmd.bCutterHome := FALSE;
 	END_IF;
 	
+	//Animation;
 	
 
 	

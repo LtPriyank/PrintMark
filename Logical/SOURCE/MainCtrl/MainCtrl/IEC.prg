@@ -5,10 +5,6 @@
     <File Description="Init, cyclic, exit code">Main.st</File>
     <File Description="Local data types" Private="true">Types.typ</File>
     <File Description="Local variables" Private="true">Variables.var</File>
-    <File>AxisIOMap.st</File>
-    <File>HomePos.st</File>
-    <File>Homing.st</File>
-    <File>Manual.st</File>
-    <File>PrintCam.st</File>
+    <File>Automatic.st</File>
   </Files>
 </Program>

@@ -1,6 +1,7 @@
 (*MpAxisBasic type variable*)
 VAR
 	iFb_MpAxisBasic : MpAxisBasic; (*Cutter Mp Axis Basic Variable*)
+	iFb_MpAxisCaming : MpAxisCamSequencer; (*MpAxis Cam Sequencer variable*)
 END_VAR
 (*Enumeration variable*)
 VAR

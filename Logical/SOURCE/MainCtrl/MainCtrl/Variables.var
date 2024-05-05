@@ -1,0 +1,31 @@
+(*Variable for Auto mode*)
+VAR
+	startRising : BOOL;
+	startFound : BOOL;
+	stopPressed : BOOL;
+	eStopPressed : BOOL;
+	emergencyFault : BOOL;
+	errorAckRising : BOOL;
+	errorAckFound : BOOL;
+	enAutoStep : enAutoMode;
+	machineReady : BOOL;
+END_VAR
+(*Constants*)
+VAR CONSTANT
+	K_ACC_FACTOR : UINT := 10;
+	K_DEC_FACTOR : UINT := 10;
+	CAM_SEQUENCING : BOOL := TRUE; (*CAM Sequencing Mode*)
+	K_ZERO : REAL := 0.0; (*Constant for zero value*)
+	K_STOP_PHASE : REAL := 360.0; (*Constant for stop in phase*)
+END_VAR
+(*Local Pointer method variables for accessing other modules*)
+VAR
+	beltConvStatus : UINT; (*Return Variable for pvxgetaddress of Belt Conv module*)
+	beltConvAddress : UDINT; (*Pointer address for Belt Conv control*)
+	beltConvSize : UDINT; (*Size of belt conveyor pointer variable*)
+	pBeltConveyorCtrl : REFERENCE TO BeltCtrl_Typ; (*Pointer variable for accessing Belt conveyor module*)
+	cutterStatus : UINT; (*Return Variable for pvxgetaddress of Cutter module*)
+	cutterAddress : UDINT; (*Pointer address for Cutter control*)
+	cutterSize : UDINT; (*Size of cutter pointer variable*)
+	pCutterCtrl : REFERENCE TO CutterCtrl_Typ; (*Pointer variable for accessing Cutter module*)
+END_VAR

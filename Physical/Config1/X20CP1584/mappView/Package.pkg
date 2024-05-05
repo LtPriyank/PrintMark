@@ -7,5 +7,6 @@
     <Object Type="File">ManualContent.binding</Object>
     <Object Type="File">CapAlarmContent.eventbinding</Object>
     <Object Type="File">PrintAlarmContent.eventbinding</Object>
+    <Object Type="File">MainContent.binding</Object>
   </Objects>
 </Package>

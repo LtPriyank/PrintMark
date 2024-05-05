@@ -77,13 +77,20 @@ END_TYPE
 
 TYPE
 	PrintCmd_Typ : 	STRUCT 
-		Start : USINT;
-		Stop : USINT;
-		JogPositive : USINT;
-		JogNegative : USINT;
+		Start : BOOL; (*Start command for the machine*)
+		Stop : BOOL; (*Stop command for the machine*)
+		JogPositive : BOOL; (*Jog positive command for the machine*)
+		JogNegative : BOOL; (*Jog Negative command for the machine*)
+		ErrorAck : BOOL; (*Error acknowledge command for the machine*)
+		Estop : BOOL; (*E-Stop for the machine*)
+	END_STRUCT;
+	PrintPara_Typ : 	STRUCT 
+		MachineSpeed : REAL; (*Machine speed parameter*)
+		New_Member : USINT;
 	END_STRUCT;
 	PrintStatus_Typ : 	STRUCT  (*Structure for showing the status of the machine*)
-		New_Member : USINT;
+		machineStatus : STRING[80]; (*For displaying status of the machine*)
+		powerOnHome : BOOL; (*For checking homing*)
 	END_STRUCT;
 	PrintIn_Typ : 	STRUCT  (*Structure for Inputs of the machine*)
 		New_Member : USINT;
@@ -97,6 +104,7 @@ TYPE
 	END_STRUCT;
 	PrintCtrl_Typ : 	STRUCT  (*Structure of controlling the machine operation*)
 		Cmd : PrintCmd_Typ; (*Machine command type variable*)
+		Para : PrintPara_Typ; (*Machine parameters type variable*)
 		Status : PrintStatus_Typ; (*Machine status type variable*)
 		IO : PrintIO_Typ; (*Machine IO type variable*)
 	END_STRUCT;

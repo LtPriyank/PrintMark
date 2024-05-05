@@ -1,6 +1,10 @@
 (*Constants*)
 VAR CONSTANT
-	K_BELT_JOG_INIT : REAL := 100; (*Init value for belt jog speed*)
-	K_CUTTER_JOG_INIT : REAL := 100; (*Init value for cutter jog speed*)
 	K_ZERO : USINT := 0; (*Constant zero value*)
+	K_CUTTER_JOG_INIT : REAL := 100; (*Init value for cutter jog speed*)
+	K_BELT_JOG_INIT : REAL := 100; (*Init value for belt jog speed*)
+END_VAR
+(*Enumeration variable*)
+VAR
+	enAnimation : enAnimationSteps;
 END_VAR

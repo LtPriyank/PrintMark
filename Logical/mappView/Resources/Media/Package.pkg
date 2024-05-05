@@ -12,5 +12,6 @@
     <Object Type="File">SortConveyor.PNG</Object>
     <Object Type="Package">Bitmaps</Object>
     <Object Type="Package">Stages</Object>
+    <Object Type="File">drawing.svg</Object>
   </Objects>
 </Package>

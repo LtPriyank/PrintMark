@@ -11,6 +11,7 @@
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="ManualContent_binding" />
+    <BindingsSet refId="MainContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="CapAlarmContent_eventbinding" />

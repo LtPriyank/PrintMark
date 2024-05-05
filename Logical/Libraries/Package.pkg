@@ -18,5 +18,6 @@
     <Object Type="Library" Language="binary" Description="This library contains standard function blocks and functions for IEC 61131-3.">standard</Object>
     <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
     <Object Type="Library" Language="Binary" Description="Communication library for mappView widgets">MpServer</Object>
+    <Object Type="Library" Language="binary" Description="Add-on library to ACP10_MC for registration mark handling">MC_RegMa</Object>
   </Objects>
 </Package>
