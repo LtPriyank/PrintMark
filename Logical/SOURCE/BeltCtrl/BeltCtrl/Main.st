@@ -9,16 +9,18 @@ PROGRAM _CYCLIC
 	AxisIOMap;
 	
 	//Calling Belt Axis Homing file
-	beltCtrl.Cmd.bHome := gPrintMarkHMI.Cmd.bBeltHome;
+	IF(gPrintMark.Cmd.manualMode = TRUE)THEN
+		beltCtrl.Cmd.bHome := gPrintMarkHMI.Cmd.bBeltHome;
+	END_IF;
 	Homing;
 	
 	//Calling Belt Axis manual operation
-	beltCtrl.Para.jogSpeed := gPrintMarkHMI.Para.beltJogSpeed;
-	beltCtrl.Cmd.bJogPositive := gPrintMarkHMI.Cmd.bBeltJogPositive;
-	beltCtrl.Cmd.bJogNegative := gPrintMarkHMI.Cmd.bBeltJogNegative;
-	Manual;
-	
-
+	IF(gPrintMark.Cmd.manualMode = TRUE)THEN
+		beltCtrl.Para.jogSpeed := gPrintMarkHMI.Para.beltJogSpeed;
+		beltCtrl.Cmd.bJogPositive := gPrintMarkHMI.Cmd.bBeltJogPositive;
+		beltCtrl.Cmd.bJogNegative := gPrintMarkHMI.Cmd.bBeltJogNegative;
+		Manual;
+	END_IF;
 	 
 END_PROGRAM
 

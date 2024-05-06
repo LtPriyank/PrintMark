@@ -3,7 +3,7 @@ ACTION Printcam:
 	
 	gAx_CutterCam.In.Parameters.Configuration.Master := ADR(gMl_BeltAxis); // Not Mplink Axis Address 
 	gAx_CutterCam.In.Parameters.Configuration.MasterParID := ACP10PAR_PCTRL_S_ACT;  //ACP10PAR_S_SET_VAX1;
-	gAx_CutterCam.In.Parameters.Configuration.MaxMasterVelocity := 120000; //Maximum velocity of the master axis.
+	gAx_CutterCam.In.Parameters.Configuration.MaxMasterVelocity :=  2000; //Maximum velocity of the master axis.
 	
 	(** STATE 0 Event 1 - 	NOT USED - JUMP TO STATE 1 **) 
 	gAx_CutterCam.In.Parameters.Configuration.State[0].Event[0].Type := ncST_END; //Trigger 

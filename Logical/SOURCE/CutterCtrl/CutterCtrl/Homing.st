@@ -16,7 +16,7 @@ ACTION Homing:
 			(gAx_Cutter.Out.Position<cutCtrl.Para.homeNegativeTol))THEN
 			cutCtrl.Cmd.bHome := FALSE;
 		END_IF;
-	ELSIF(gAx_Cutter.Out.Position = K_ZERO)THEN
+	ELSIF((gAx_Cutter.Out.Position = K_ZERO))THEN
 		gAx_Cutter.In.MoveAbsolute := FALSE;
 	END_IF;
 	

@@ -14,6 +14,7 @@ TYPE
 		bCutterHome : BOOL; (*Cutter axis home command*)
 		bBeltErrorReset : BOOL; (*Belt conveyor axis error reset command*)
 		bCutterErrorReset : BOOL; (*Cutter axis error reset command*)
+		modeSelect : USINT; (*Mode selection for the machine*)
 	END_STRUCT;
 	PrintParaHMI_Typ : 	STRUCT 
 		beltJogSpeed : REAL; (*Jog velocity for belt conveyor*)

@@ -1,4 +1,4 @@
-
+	
 ACTION Automatic: 
 	
 	//Basic input parameters for the machine
@@ -77,30 +77,35 @@ ACTION Automatic:
 		IDLE:	//Waiting for Start Command
 			gPrintMark.Status.machineStatus := 'Machine Waiting for Start Command';
 			machineReady := TRUE;
-			IF (startRising = TRUE) AND
+			IF (startRising = TRUE)AND
 				(gPrintMark.Cmd.Stop = FALSE) AND
 				(gPrintMark.Cmd.Estop = FALSE) THEN
 				IF (CAM_SEQUENCING = TRUE) THEN
 					gAx_CutterCam.In.StartSequence := TRUE;
+					gAx_CutterCam.In.Continue := TRUE;
 					gAx_CutterCam.In.EndSequence := FALSE;
 				END_IF
 				enAutoStep := STARTING;
 			END_IF
             
 		STARTING:	//Starting the CAM Sequence
-			IF (CAM_SEQUENCING <> TRUE) THEN
-				gAx_CutterCam.In.StartSequence := FALSE;
-				gAx_CutterCam.In.EndSequence := FALSE;
-			END_IF
-			gAx_BeltConveyor.In.MoveVelocity := TRUE;
-			enAutoStep := EXECUTE;
+			IF (gAx_CutterCam.Out.InCompensation = TRUE) OR
+				(gAx_CutterCam.Out.InSync = TRUE) THEN
+				IF (CAM_SEQUENCING <> TRUE) THEN
+					gAx_CutterCam.In.StartSequence := FALSE;
+					gAx_CutterCam.In.EndSequence := FALSE;
+				END_IF
+				gAx_BeltConveyor.In.MoveVelocity := TRUE;
+				enAutoStep := EXECUTE;
+			END_IF;
+			
         
 		EXECUTE: //Starting the Master Axis
 			gPrintMark.Status.machineStatus := 'Machine is in Motion';
 			IF (stopPressed = TRUE) THEN
 				gAx_BeltConveyor.In.Stop := TRUE;
 				gAx_BeltConveyor.In.Parameters.Stop.StopInPhase := TRUE;
-				gAx_BeltConveyor.In.Parameters.Stop.Phase := K_STOP_PHASE;
+				gAx_BeltConveyor.In.Parameters.Stop.Phase := K_ZERO;
 				gAx_BeltConveyor.In.Parameters.Stop.Deceleration := gPrintMark.Para.MachineSpeed * K_DEC_FACTOR;
 				enAutoStep := STOPPING;
 			END_IF
@@ -118,7 +123,8 @@ ACTION Automatic:
 			gPrintMark.Status.machineStatus := 'Machine is in Error';
 			IF (gAx_BeltConveyor.Out.Stopped = TRUE) OR
 				(gAx_BeltConveyor.Out.Info.PLCopenState = mpAXIS_ERRORSTOP) OR
-				(gAx_BeltConveyor.Out.Info.PLCopenState = mpAXIS_DISABLED) THEN
+				(gAx_BeltConveyor.Out.Info.PLCopenState = mpAXIS_DISABLED) OR 
+				(gAx_BeltConveyor.Out.Info.PLCopenState = mpAXIS_STANDSTILL) THEN
 				gAx_BeltConveyor.In.Stop := FALSE;
 			END_IF
 
@@ -132,8 +138,10 @@ ACTION Automatic:
 
 			IF (gAx_Cutter.Out.Stopped = TRUE) OR
 				(gAx_Cutter.Out.Info.PLCopenState = mpAXIS_ERRORSTOP) OR
-				(gAx_Cutter.Out.Info.PLCopenState = mpAXIS_DISABLED) THEN
+				(gAx_Cutter.Out.Info.PLCopenState = mpAXIS_DISABLED) OR 
+				(gAx_Cutter.Out.Info.PLCopenState = mpAXIS_SYNCHRONIZED_MOTION)  THEN
 				gAx_CutterCam.In.StartSequence := FALSE;
+				gAx_CutterCam.In.Continue := FALSE;
 				gAx_Cutter.In.Stop  := FALSE;
 			END_IF
 

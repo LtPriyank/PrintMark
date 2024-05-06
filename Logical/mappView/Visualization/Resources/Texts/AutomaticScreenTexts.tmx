@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="MachineSpeed">
+      <tuv xml:lang="en">
+        <seg>MACHINE SPEED</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PrintMarkWidth">
+      <tuv xml:lang="en">
+        <seg>PRINT MARK WIDTH</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PrintMarkWindow">
+      <tuv xml:lang="en">
+        <seg>PRINT MARK WNDOW</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ProductLength">
+      <tuv xml:lang="en">
+        <seg>PRODUCT LENGTH</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SimulationWidth">
+      <tuv xml:lang="en">
+        <seg>SIMULATION WIDTH</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MachineParameters">
+      <tuv xml:lang="en">
+        <seg>MACHINE PARAMETERS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PrintMarkParameters">
+      <tuv xml:lang="en">
+        <seg>PRINT MARK PARAMETERS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetLength">
+      <tuv xml:lang="en">
+        <seg>SET LENGTH</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MinWidth">
+      <tuv xml:lang="en">
+        <seg>MIN WIDTH</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MaxWidth">
+      <tuv xml:lang="en">
+        <seg>MAX WIDTH</seg>
+      </tuv>
+    </tu>
+    <tu tuid="NegativeWindow">
+      <tuv xml:lang="en">
+        <seg>NEGATIVE WINDOW</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PositiveWindow">
+      <tuv xml:lang="en">
+        <seg>POSITIVE WINDOW</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoOptions">
+      <tuv xml:lang="en">
+        <seg>AUTO OPTIONS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SensorSimulation">
+      <tuv xml:lang="en">
+        <seg>SENSOR SIMULATION</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CuttingUnit">
+      <tuv xml:lang="en">
+        <seg>CUTTING UNIT</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Enable">
+      <tuv xml:lang="en">
+        <seg>ENABLE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Disable">
+      <tuv xml:lang="en">
+        <seg>DISABLE</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

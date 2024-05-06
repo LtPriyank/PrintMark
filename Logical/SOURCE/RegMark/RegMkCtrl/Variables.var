@@ -2,21 +2,21 @@
 VAR
 	MC_BR_RegMarkCapture002_Print : MC_BR_RegMarkCapture002 := (0); (*MC_BR_RegMarkCapture002 FB Type variable*)
 END_VAR
-(*Variable for regmark controlling*)
-VAR
-	regMarkCtrl : RegMarkCtrl_Typ; (*Variable for regmark controlling*)
-END_VAR
 (*Constants*)
 VAR CONSTANT
 	K_INIT_PROD_LENGTH : REAL := 700; (*Init Product length*)
+	K_INIT_REGMRK_OFF : REAL := 70; (*Init Registrattion mark offset*)
 	K_INIT_REGMRK_POS : REAL := 700; (*Init Registration mark position*)
-	K_INIT_REGMRK_OFF : REAL := 10; (*Init Registrattion mark offset*)
-	K_INIT_SENS_DIST : REAL := 10; (*Init Distance between two sensors*)
-	K_INIT_MIN_WIDTH : REAL := 50; (*Init Minimun print mark width*)
-	K_INIT_MAX_WIDTH : REAL := 200; (*Init maximum print mark width*)
+	K_INIT_SENS_DEL : DINT := 10; (*Init Print mark sensor delay*)
+	K_INIT_SENS_DIST : REAL := 1040; (*Init Distance between two sensors*)
 	K_INIT_WINDOW_NEG : REAL := 200; (*Init Print mark negative window*)
-	K_INIT_WINDOW_POS : REAL := 200; (*Init Print mark positive window*)
-	K_INIT_SENS_DEL : DINT := 200; (*Init Print mark sensor delay*)
 	K_INIT_CORR_NEG : REAL := 70; (*Init Negative correction value*)
 	K_INIT_CORR_POS : REAL := 70; (*Init Positive correction value*)
+	K_INIT_MAX_WIDTH : REAL := 120; (*Init maximum print mark width*)
+	K_INIT_MIN_WIDTH : REAL := 10; (*Init Minimun print mark width*)
+	K_INIT_WINDOW_POS : REAL := 200; (*Init Print mark positive window*)
+END_VAR
+(*Variable for regmark controlling*)
+VAR
+	regMarkCtrl : RegMarkCtrl_Typ; (*Variable for regmark controlling*)
 END_VAR

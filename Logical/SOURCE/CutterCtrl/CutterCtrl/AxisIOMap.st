@@ -59,8 +59,16 @@ ACTION AxisIOMap:
 	iFb_MpAxisCaming.EndSequence  := gAx_CutterCam.In.EndSequence;
 	
 	//Cam Axis basic output parameters
+	gAx_CutterCam.Out.Active           := iFb_MpAxisCaming.Active;
+	gAx_CutterCam.Out.Error            := iFb_MpAxisCaming.Error;
+	gAx_CutterCam.Out.StatusID         := iFb_MpAxisCaming.StatusID;
+	gAx_CutterCam.Out.UpdateDone       := iFb_MpAxisCaming.UpdateDone;
+	gAx_CutterCam.Out.ActualStateIndex := iFb_MpAxisCaming.ActualStateIndex;
+	gAx_CutterCam.Out.ActualStateCamIndex    := iFb_MpAxisCaming.ActualStateCamIndex;
+	gAx_CutterCam.Out.StandBy          := iFb_MpAxisCaming.Standby;
+	gAx_CutterCam.Out.Info             := iFb_MpAxisCaming.Info;
 	gAx_CutterCam.Out.InSync := iFb_MpAxisCaming.InSync;
-	gAx_CutterCam.Out.Error := iFb_MpAxisCaming.Error;
+	gAx_CutterCam.Out.InCompensation := iFb_MpAxisCaming.InCompensation;
 	
 	//Calling Cam FB
 	iFb_MpAxisCaming();

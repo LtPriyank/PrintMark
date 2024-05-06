@@ -17,6 +17,8 @@ VAR CONSTANT
 	CAM_SEQUENCING : BOOL := TRUE; (*CAM Sequencing Mode*)
 	K_ZERO : REAL := 0.0; (*Constant for zero value*)
 	K_STOP_PHASE : REAL := 360.0; (*Constant for stop in phase*)
+	K_MANUAL : UINT := 0; (*Constant for manual mode*)
+	K_AUTO : UINT := 1; (*Constant for auto mode*)
 END_VAR
 (*Local Pointer method variables for accessing other modules*)
 VAR

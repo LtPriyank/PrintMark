@@ -3,7 +3,7 @@
   <Bindings>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.beltAnimationString" attribute="value" />
-<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltConveyorPaper" attribute="transform" />
+
 </Binding>
 </Bindings>
 </BindingsSet>

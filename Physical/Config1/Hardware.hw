@@ -56,12 +56,23 @@
       <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Connector Name="IF3">
-      <Parameter ID="CycleTime" Value="400" />
+      <Parameter ID="CycleTime" Value="1600" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="PrintMark_Config1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="X20CP1584.IF3" />
-    <Parameter ID="TaskClassIdleTime" Value="2000" />
+    <Parameter ID="TaskClassIdleTime" Value="1600" />
+    <Parameter ID="Cyclic1Duration" Value="1600" />
+    <Parameter ID="Cyclic1Tolerance" Value="1600" />
+    <Parameter ID="Cyclic2Duration" Value="19200" />
+    <Parameter ID="Cyclic2Tolerance" Value="19200" />
+    <Parameter ID="Cyclic3Duration" Value="49600" />
+    <Parameter ID="Cyclic3Tolerance" Value="49600" />
+    <Parameter ID="Cyclic4Duration" Value="99200" />
+    <Parameter ID="Cyclic4Tolerance" Value="99200" />
+    <Parameter ID="Cyclic6Duration" Value="499200" />
+    <Parameter ID="Cyclic6Tolerance" Value="499200" />
+    <Parameter ID="Cyclic8Duration" Value="9600" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="USER" />
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />

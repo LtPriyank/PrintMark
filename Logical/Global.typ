@@ -83,6 +83,9 @@ TYPE
 		JogNegative : BOOL; (*Jog Negative command for the machine*)
 		ErrorAck : BOOL; (*Error acknowledge command for the machine*)
 		Estop : BOOL; (*E-Stop for the machine*)
+		autoMode : BOOL; (*Auto mode for the machine*)
+		manualMode : BOOL; (*Manual mode for the machine
+*)
 	END_STRUCT;
 	PrintPara_Typ : 	STRUCT 
 		MachineSpeed : REAL; (*Machine speed parameter*)
