@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="Mode">
+      <tuv xml:lang="en">
+        <seg>MODE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualMode">
+      <tuv xml:lang="en">
+        <seg>MANUAL MODE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoMode">
+      <tuv xml:lang="en">
+        <seg>AUTO MODE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ModeSelection">
+      <tuv xml:lang="en">
+        <seg>MODE SELECTION</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ProcessDetails">
+      <tuv xml:lang="en">
+        <seg>PROCESS DETAILS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AverageDistance">
+      <tuv xml:lang="en">
+        <seg>AVERAGE DISTANCE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LastProductLength">
+      <tuv xml:lang="en">
+        <seg>LAST PRODUCT LENGTH</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ValidPrints">
+      <tuv xml:lang="en">
+        <seg>VALID PRINT MARK</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MissedPrintMarks">
+      <tuv xml:lang="en">
+        <seg>MISSED PRINT MARKS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PrintMarksDetails">
+      <tuv xml:lang="en">
+        <seg>PRINT MARK DETAILS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CutsPerMinute">
+      <tuv xml:lang="en">
+        <seg>CUTS PER MINUTE</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

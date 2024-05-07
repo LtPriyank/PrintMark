@@ -14,7 +14,7 @@ PROGRAM _CYCLIC
 	HomePos;
 	
 	//Homing Operation after finding homing position
-	IF(gPrintMark.Cmd.manualMode = TRUE)THEN
+	IF(gPrintMark.Cmd.ManualMode = TRUE)THEN
 		cutCtrl.Cmd.bHome := gPrintMarkHMI.Cmd.bCutterHome;
 	END_IF;
 	
@@ -23,7 +23,7 @@ PROGRAM _CYCLIC
 	END_IF;
 	
 	//Manual command for Cutter axis
-	IF(gPrintMark.Cmd.manualMode = TRUE)THEN
+	IF(gPrintMark.Cmd.ManualMode = TRUE)THEN
 		cutCtrl.Para.jogSpeed := gPrintMarkHMI.Para.cutterJogSpeed;
 		cutCtrl.Cmd.bJogPositive := gPrintMarkHMI.Cmd.bCutterJogPositive;
 		cutCtrl.Cmd.bJogNegative := gPrintMarkHMI.Cmd.bCutterJogNegative;

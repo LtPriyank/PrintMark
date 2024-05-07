@@ -14,9 +14,13 @@ VAR CONSTANT
 	K_INIT_CORR_POS : REAL := 70; (*Init Positive correction value*)
 	K_INIT_MAX_WIDTH : REAL := 120; (*Init maximum print mark width*)
 	K_INIT_MIN_WIDTH : REAL := 10; (*Init Minimun print mark width*)
+	K_ZERO : USINT := 0; (*constant value 0*)
+	K_MAX_INVALID : USINT := 5; (*Constant for maximum invalid print marks*)
 	K_INIT_WINDOW_POS : REAL := 200; (*Init Print mark positive window*)
 END_VAR
 (*Variable for regmark controlling*)
 VAR
 	regMarkCtrl : RegMarkCtrl_Typ; (*Variable for regmark controlling*)
+	validRmOld : UDINT; (*Variable for old RM value*)
+	validRmNew : UDINT; (*Variable for new RM value*)
 END_VAR

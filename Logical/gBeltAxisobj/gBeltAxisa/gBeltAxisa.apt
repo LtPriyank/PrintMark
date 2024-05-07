@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <AcoposParameterTable>
-  <Root Name="Parameters" />
+  <Root Name="Parameters">
+    <Parameter Name="MA1_CYCLIC_SEND" ID="484" Value="111" Description="Network coupling: Parameter ID of send data master1" />
+  </Root>
 </AcoposParameterTable>

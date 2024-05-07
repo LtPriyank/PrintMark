@@ -1,14 +1,16 @@
 (*Variable for Auto mode*)
 VAR
-	startRising : BOOL;
-	startFound : BOOL;
-	stopPressed : BOOL;
-	eStopPressed : BOOL;
-	emergencyFault : BOOL;
-	errorAckRising : BOOL;
-	errorAckFound : BOOL;
-	enAutoStep : enAutoMode;
-	machineReady : BOOL;
+	startRising : BOOL; (*For giving start to the machine*)
+	startFound : BOOL; (*For interlocking start*)
+	stopPressed : BOOL; (*Stopping the machine*)
+	eStopPressed : BOOL; (*Estop in machine*)
+	emergencyFault : BOOL; (*Emergency fault*)
+	errorAckRising : BOOL; (*Error acknowledging interlock*)
+	errorAckFound : BOOL; (*Error acknowledge found*)
+	enAutoStep : enAutoMode; (*Auto states*)
+	cutPerMinTimer : UINT; (*Timer for cuts per minute*)
+	cutPerMinCount : UINT; (*Counter for cuts per minute*)
+	machineReady : BOOL; (*Machine is ready*)
 END_VAR
 (*Constants*)
 VAR CONSTANT
@@ -18,6 +20,8 @@ VAR CONSTANT
 	K_ZERO : REAL := 0.0; (*Constant for zero value*)
 	K_STOP_PHASE : REAL := 360.0; (*Constant for stop in phase*)
 	K_MANUAL : UINT := 0; (*Constant for manual mode*)
+	K_INIT_MACHINE_SPEED : UINT := 50; (*Init value of machine speed*)
+	K_MINUTE_TIMER : UDINT := 37500; (*Timer for cuts per minute*)
 	K_AUTO : UINT := 1; (*Constant for auto mode*)
 END_VAR
 (*Local Pointer method variables for accessing other modules*)
@@ -30,4 +34,8 @@ VAR
 	cutterAddress : UDINT; (*Pointer address for Cutter control*)
 	cutterSize : UDINT; (*Size of cutter pointer variable*)
 	pCutterCtrl : REFERENCE TO CutterCtrl_Typ; (*Pointer variable for accessing Cutter module*)
+END_VAR
+(*FB for edge control*)
+VAR
+	R_TRIG_CPM : R_TRIG; (*Positive edge of the sensor*)
 END_VAR

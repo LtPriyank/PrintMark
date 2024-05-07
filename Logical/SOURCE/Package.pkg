@@ -6,6 +6,8 @@
     <Object Type="Package">BeltCtrl</Object>
     <Object Type="Package">CutterCtrl</Object>
     <Object Type="Package">RegMark</Object>
+    <Object Type="Package">AlarmCtrl</Object>
     <Object Type="Package">VisCtrl</Object>
+    <Object Type="Package">DataCtrl</Object>
   </Objects>
 </Package>

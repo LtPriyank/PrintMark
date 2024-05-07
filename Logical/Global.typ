@@ -83,13 +83,18 @@ TYPE
 		JogNegative : BOOL; (*Jog Negative command for the machine*)
 		ErrorAck : BOOL; (*Error acknowledge command for the machine*)
 		Estop : BOOL; (*E-Stop for the machine*)
-		autoMode : BOOL; (*Auto mode for the machine*)
-		manualMode : BOOL; (*Manual mode for the machine
+		AutoMode : BOOL; (*Auto mode for the machine*)
+		ManualMode : BOOL; (*Manual mode for the machine
 *)
+		CutterDisable : BOOL; (*Command for disbling the cutter axis*)
+		SimSensor : BOOL; (*Command for enabling the simulated sensor*)
 	END_STRUCT;
 	PrintPara_Typ : 	STRUCT 
 		MachineSpeed : REAL; (*Machine speed parameter*)
-		New_Member : USINT;
+		SimPrintMinWidth : REAL; (*Minimum print mark width for the simulation*)
+		SimPrintMaxWidth : REAL; (*Maximum print mark width for the simulation*)
+		ValidRm : UDINT; (*Valid RM's*)
+		CutsPerMinute : UINT; (*Cuts per minute*)
 	END_STRUCT;
 	PrintStatus_Typ : 	STRUCT  (*Structure for showing the status of the machine*)
 		machineStatus : STRING[80]; (*For displaying status of the machine*)

@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <AcoposParameterTable>
-  <Root Name="Parameters" />
+  <Root Name="Parameters">
+    <Parameter Name="CONFIG_MA1_CYCLIC_POS" ID="593" Value="1,484" Description="Network coupling: Configure station to receive on MA1_CYCLIC_POS" />
+    <Group Name="CAMCON">
+      <Parameter Name="FUNCTION_BLOCK_CREATE" ID="777" Value="10752" Description="Function block: Create a FB instance" />
+      <Parameter Name="CAMCON_MODE+0" ID="10752" Value="0" Description="FB0 CAMCON Mode" />
+      <Parameter Name="CAMCON_IN_PARID+0" ID="10760" Value="542" Description="FB0 CAMCON Parameter ID of input" />
+      <Parameter Name="CAMCON_EV_PARID+0" ID="10864" Disabled="TRUE" Description="FB0 CAMCON Parameter ID start event" />
+      <Parameter Name="CAMCON_S_START+0" ID="10768" Value="0" Description="FB0 CAMCON Start position" />
+      <Parameter Name="CAMCON_S_IV+0" ID="10776" Value="700" Description="FB0 CAMCON Interval" />
+      <Parameter Name="CAMCON_T_DELAY_ON+0" ID="10784" Unit="s" Disabled="TRUE" Description="FB0 CAMCON Delay time to switch output ON" />
+      <Parameter Name="CAMCON_T_DELAY_OFF+0" ID="10792" Unit="s" Disabled="TRUE" Description="FB0 CAMCON Delay time to switch output OFF" />
+      <Parameter Name="CAMCON_T1_DELAY+0" ID="10800" Unit="s" Disabled="TRUE" Description="FB0 CAMCON Switch delay: Filter time constant" />
+      <Parameter Name="CAMCON_HYSTERESIS+0" ID="10808" Disabled="TRUE" Description="FB0 CAMCON Hysteresis window" />
+      <Parameter Name="CAMCON_MAX_CAM+0" ID="10816" Value="1" Disabled="FALSE" Description="FB0 CAMCON Maximum number of cams" />
+      <Parameter Name="CAMCON_CAM_INDEX+0" ID="10824" Value="1" Description="FB0 CAMCON Index of parameter record for one cam" />
+      <Parameter Name="CAMCON_CAM_S1+0" ID="10832" Value="600" Description="FB0 CAMCON Start position of cam within interval" />
+      <Parameter Name="CAMCON_CAM_S2+0" ID="10840" Value="690" Description="FB0 CAMCON End position of cam within interval" />
+      <Parameter Name="CAMCON_VALUE+0" ID="10848" Value="0" Description="FB0 CAMCON Output value" />
+      <Parameter Name="CAMCON_MODE+0" ID="10752" Value="1" Description="FB0 CAMCON Mode" />
+    </Group>
+  </Root>
 </AcoposParameterTable>

@@ -2,8 +2,77 @@
 <BindingsSet id="MainContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.beltAnimationString" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.modeSelect" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="ModeSelectionDropBox" attribute="selectedIndex" />
+</Binding>
 
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider12" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider9" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider10" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::VisCtrl:cutterAnimation" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="CutterSlider" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.validPrintMarks" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BlackCapsCount_NumericOutput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.lastProdLength" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="GrayCapsCount_NumericOutput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.avgPmDistance" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="RedCapsCount_NumericOutput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.cutsPerMinute" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="CutsPerMinute_NumericOutput" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

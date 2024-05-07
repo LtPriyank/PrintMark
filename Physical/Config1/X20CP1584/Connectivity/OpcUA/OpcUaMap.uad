@@ -22,6 +22,8 @@
       <Task Name="VisCtrl">
         <Variable Name="K_BELT_JOG_INIT" />
         <Variable Name="K_CUTTER_JOG_INIT" />
+        <Variable Name="beltAnimation" />
+        <Variable Name="cutterAnimation" />
       </Task>
     </Module>
   </DefaultView>

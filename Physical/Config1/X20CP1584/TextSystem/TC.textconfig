@@ -13,6 +13,8 @@
       <Property ID="TargetFile[1]" Value="mappView.Visualization.Resources.Texts.ManualScreenTexts.tmx" />
       <Property ID="TargetFile[2]" Value="mappView.Visualization.Resources.Texts.NavigationScreenTexts.tmx" />
       <Property ID="TargetFile[3]" Value="mappView.Visualization.Resources.Texts.AlarmTexts.tmx" />
+      <Property ID="TargetFile[4]" Value="mappView.Visualization.Resources.Texts.AutomaticScreenTexts.tmx" />
+      <Property ID="TargetFile[5]" Value="mappView.Visualization.Resources.Texts.MainScreenTexts.tmx" />
     </Group>
   </Element>
 </Configuration>

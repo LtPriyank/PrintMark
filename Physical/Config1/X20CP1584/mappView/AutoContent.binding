@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="AutoContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.bStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="MCStart_ToggleButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.bStop" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="MCStop_ToggleButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.bSimSensor" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="SensorSimulation" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.bCutterSelect" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="CuttingUnitSelect" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.machineSpeed" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="MachineSpeed_NumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.productLength" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="ProductLength_NumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.minWidth" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="MinPrintWidth_NumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.maxWidth" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="MaxPrintWidth_NumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.windowNeg" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="PrintMarkWindowNeg" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.windowPos" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="PrintMarkWindowPos" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.simMinWidth" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="simPrintWidthMin_NumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.simMaxWidth" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="simPrintWidthMax_NumericInput" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.bErrorReset" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="MCReset_ToggleButton" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

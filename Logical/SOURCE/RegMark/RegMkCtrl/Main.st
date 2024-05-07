@@ -1,7 +1,7 @@
 
 PROGRAM _INIT
 	//Init values of the Reg mark capture
-	gRegConfigPara.ProductLength := 700;
+	gRegConfigPara.ProductLength := K_INIT_PROD_LENGTH;
 	gRegConfigPara.RegMarkPosition := K_INIT_REGMRK_POS;
 	gRegConfigPara.RegMarkOffset := K_INIT_REGMRK_OFF;
 	gRegConfigPara.DistanceToSensor := K_INIT_SENS_DIST;
@@ -17,6 +17,7 @@ PROGRAM _INIT
 	gRegAdvancePara.Mode := mcFIRST_RM;
 	gRegAdvancePara.EventSourceParID := ACP10PAR_STAT_TRIGGER1 ;
 	gRegAdvancePara.Edge := ncP_EDGE;//Positive Edge
+	validRmNew := 0;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -33,6 +34,41 @@ PROGRAM _CYCLIC
 	MC_BR_RegMarkCapture002_Print.Configuration := gRegConfigPara;
 	MC_BR_RegMarkCapture002_Print.AdvancedParameters := gRegAdvancePara;
 	MC_BR_RegMarkCapture002_Print();
+	
+	//Process values for HMI
+	gPrintMarkHMI.Para.avgPmDistance := MC_BR_RegMarkCapture002_Print.AdditionalInfo.AverageProductLength;
+	gPrintMarkHMI.Para.lastProdLength := MC_BR_RegMarkCapture002_Print.AdditionalInfo.ActLength;
+	gPrintMarkHMI.Para.validPrintMarks := MC_BR_RegMarkCapture002_Print.ValidRMs;
+	gPrintMark.Para.ValidRm := MC_BR_RegMarkCapture002_Print.ValidRMs;
+	//Condition for missed regmarks
+	IF(MC_BR_RegMarkCapture002_Print.Enable = TRUE)THEN
+		IF(validRmNew <> MC_BR_RegMarkCapture002_Print.ValidRMs)THEN
+			validRmOld := validRmNew;
+			validRmNew := MC_BR_RegMarkCapture002_Print.ValidRMs;
+		END_IF;
+		IF((gAx_Cutter.Out.Info.DigitalInputsStatus.Trigger1)AND(validRmOld=validRmNew)AND(validRmNew>=1))THEN
+			gPrintMarkHMI.Para.missedPrintMarks :=  gPrintMarkHMI.Para.missedPrintMarks + 1;
+		END_IF;
+	ELSE
+			gPrintMarkHMI.Para.missedPrintMarks := K_ZERO;
+	END_IF;
+	//Condition for Invalid Printmarks
+	IF(MC_BR_RegMarkCapture002_Print.Enable = TRUE)THEN
+		IF(MC_BR_RegMarkCapture002_Print.ProductsWithoutRM > K_MAX_INVALID)THEN
+			gPrintMark.Cmd.Stop := TRUE;
+		END_IF;
+	END_IF;
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+
 	 
 END_PROGRAM
 

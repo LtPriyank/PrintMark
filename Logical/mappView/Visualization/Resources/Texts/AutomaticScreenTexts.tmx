@@ -90,5 +90,20 @@
         <seg>DISABLE</seg>
       </tuv>
     </tu>
+    <tu tuid="Start">
+      <tuv xml:lang="en">
+        <seg>START</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Stop">
+      <tuv xml:lang="en">
+        <seg>STOP</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetSpeed">
+      <tuv xml:lang="en">
+        <seg>SET SPEED(CPM)</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

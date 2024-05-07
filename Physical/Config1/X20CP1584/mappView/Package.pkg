@@ -7,6 +7,9 @@
     <Object Type="File">ManualContent.binding</Object>
     <Object Type="File">CapAlarmContent.eventbinding</Object>
     <Object Type="File">PrintAlarmContent.eventbinding</Object>
+    <Object Type="File">AutoContent.binding</Object>
+    <Object Type="File">TopContent.binding</Object>
     <Object Type="File">MainContent.binding</Object>
+    <Object Type="File">PrintAlarmContent.binding</Object>
   </Objects>
 </Package>

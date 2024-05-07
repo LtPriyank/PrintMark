@@ -11,14 +11,20 @@ ACTION Automatic:
 	gAx_BeltConveyor.In.ErrorReset := errorAckRising;
 	gAx_Cutter.In.ErrorReset := errorAckRising;
 	gAx_CutterCam.In.ErrorReset := errorAckRising;
-	//Updating the FB's
-	gAx_BeltConveyor.In.Update := FALSE;
-	gAx_Cutter.In.Update := FALSE;
-	gAx_CutterCam.In.Update := FALSE;
+	
 	//Speed parameters
 	gAx_BeltConveyor.In.Parameters.Velocity := gPrintMark.Para.MachineSpeed;
 	gAx_BeltConveyor.In.Parameters.Acceleration := gPrintMark.Para.MachineSpeed * K_ACC_FACTOR ;
 	gAx_BeltConveyor.In.Parameters.Deceleration := gPrintMark.Para.MachineSpeed * K_DEC_FACTOR;
+	//Updating the Parameters
+	IF(gAx_BeltConveyor.In.Parameters.Velocity <> gPrintMark.Para.MachineSpeed)THEN
+		gAx_BeltConveyor.In.Update := TRUE;
+		IF(gAx_BeltConveyor.Out.UpdateDone = TRUE)THEN
+			gAx_BeltConveyor.In.Update := FALSE;
+			gAx_Cutter.In.Update := FALSE;
+			gAx_CutterCam.In.Update := FALSE;
+		END_IF;
+	END_IF;
 	
 	//Stop command for the machine
 	IF (gAx_BeltConveyor.Out.MoveActive = TRUE) AND
@@ -66,7 +72,7 @@ ACTION Automatic:
 					pCutterCtrl.Cmd.bHome := TRUE;
 				END_IF
 			END_IF
-			IF (gAx_BeltConveyor.Out.IsHomed = TRUE) AND
+			IF ((gAx_BeltConveyor.Out.IsHomed = TRUE))AND
 				((gAx_Cutter.Out.IsHomed = TRUE)OR(gAx_Cutter.Out.Position = 0)) THEN
 				gPrintMark.Status.powerOnHome := TRUE;
 				pBeltConveyorCtrl.Cmd.bHome := FALSE;
@@ -80,7 +86,7 @@ ACTION Automatic:
 			IF (startRising = TRUE)AND
 				(gPrintMark.Cmd.Stop = FALSE) AND
 				(gPrintMark.Cmd.Estop = FALSE) THEN
-				IF (CAM_SEQUENCING = TRUE) THEN
+				IF ((CAM_SEQUENCING = TRUE)) THEN
 					gAx_CutterCam.In.StartSequence := TRUE;
 					gAx_CutterCam.In.Continue := TRUE;
 					gAx_CutterCam.In.EndSequence := FALSE;
@@ -109,7 +115,12 @@ ACTION Automatic:
 				gAx_BeltConveyor.In.Parameters.Stop.Deceleration := gPrintMark.Para.MachineSpeed * K_DEC_FACTOR;
 				enAutoStep := STOPPING;
 			END_IF
-			
+			IF(gPrintMark.Cmd.CutterDisable = TRUE)THEN
+				gAx_CutterCam.In.StartSequence := FALSE;
+				gAx_CutterCam.In.EndSequence := TRUE;
+				gAx_Cutter.In.Power := FALSE;
+			END_IF;
+
 		STOPPING:	//Stopping the master axis
 			gPrintMark.Status.machineStatus := 'Machine Stopping in Phase';
 			IF (gAx_BeltConveyor.Out.Stopped = TRUE) THEN
@@ -153,7 +164,7 @@ ACTION Automatic:
 	END_CASE;
 
 	//Actions to be performed in case of emergency
-	IF (emergencyFault = TRUE) AND (enAutoStep < CLEARING) THEN
+	IF (emergencyFault = TRUE) AND (enAutoStep < ABORTED ) THEN
 		enAutoStep := ABORTED;
 		gAx_BeltConveyor.In.Stop := TRUE;
 		gAx_BeltConveyor.In.Parameters.Stop.StopInPhase  := FALSE;
@@ -172,6 +183,7 @@ ACTION Automatic:
 		gAx_BeltConveyor.In.Power := FALSE;
 		gAx_Cutter.In.Power := FALSE;
 		gPrintMark.Status.powerOnHome := FALSE;
+		gAx_CutterCam.In.EndSequence := TRUE;
 	END_IF
 
 END_ACTION

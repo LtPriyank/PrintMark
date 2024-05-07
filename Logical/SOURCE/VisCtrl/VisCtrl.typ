@@ -15,6 +15,9 @@ TYPE
 		bBeltErrorReset : BOOL; (*Belt conveyor axis error reset command*)
 		bCutterErrorReset : BOOL; (*Cutter axis error reset command*)
 		modeSelect : USINT; (*Mode selection for the machine*)
+		bCutterSelect : BOOL; (*Command for disabling the cutter axis*)
+		bSimSensor : BOOL; (*Command for enabling the simualed sensor*)
+		bErrorReset : BOOL; (*Commad for reseting the machine*)
 	END_STRUCT;
 	PrintParaHMI_Typ : 	STRUCT 
 		beltJogSpeed : REAL; (*Jog velocity for belt conveyor*)
@@ -24,9 +27,23 @@ TYPE
 		cutterJogAcc : REAL; (*Jog acceleration for cutter axis*)
 		cutterJogDecel : REAL; (*Jog deceleration for cutter axis*)
 		beltAnimationString : STRING[80]; (*Animation for belt conveyor*)
+		machineSpeed : REAL; (*Machine speed*)
+		productLength : REAL; (*Product lngth of the regmark*)
+		minWidth : REAL; (*Minimum width for the regmark*)
+		maxWidth : REAL; (*Maximum width for the regmark*)
+		windowNeg : REAL; (*Negative window for the regmark*)
+		windowPos : REAL; (*Positive window for the regmark*)
+		simMinWidth : REAL; (*Minimum width for the simulated printmark*)
+		simMaxWidth : REAL; (*Maximum width for the simulated printmark*)
+		avgPmDistance : REAL; (*Average distance between consecutive print marks*)
+		lastProdLength : REAL; (*Last Product length*)
+		validPrintMarks : UDINT; (*Valid Print Marks*)
+		missedPrintMarks : UINT; (*Missed Print Marks*)
+		cutsPerMinute : UINT; (*Cuts per minute*)
 	END_STRUCT;
 	PrintStatusHMI_Typ : 	STRUCT  (*Structure for showing the status of the machine*)
-		New_Member : USINT;
+		machineStatus : STRING[80]; (*For displaying status of the machine*)
+		New_Member1 : USINT;
 	END_STRUCT;
 	PrintInHMI_Typ : 	STRUCT  (*Structure for Inputs of the machine*)
 		New_Member : USINT;

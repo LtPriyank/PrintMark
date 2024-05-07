@@ -1,0 +1,5 @@
+(*Variables for MpAlarmxCore*)
+VAR
+	MpAlarmXCore_Print : MpAlarmXCore; (*Variable of MpAlarmxCore FB Type*)
+	bAlarmXCoreReset : BOOL; (*Variable for reseting MpAlarmxCore FB*)
+END_VAR
