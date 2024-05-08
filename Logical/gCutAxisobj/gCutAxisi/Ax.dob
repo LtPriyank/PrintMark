@@ -2,6 +2,6 @@
 <?AutomationStudio FileVersion="4.9"?>
 <DataObject SubType="Ax" xmlns="http://br-automation.co.at/AS/DataObject">
   <Files>
-    <File>gCutAxisi.ax</File>
+    <File Description="Init table">gCutAxisi.ax</File>
   </Files>
 </DataObject>

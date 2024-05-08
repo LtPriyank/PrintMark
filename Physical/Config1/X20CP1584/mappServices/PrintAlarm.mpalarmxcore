@@ -1,5 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <Configuration>
-  <Element ID="gMl_PrintAlarm" Type="mpalarmxcore" />
+  <Element ID="gMl_PrintAlarm" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="Estop" />
+        <Property ID="Message" Value="Machine E-Stop is pressed" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="BeltTempError" />
+        <Property ID="Message" Value="Belt conveyor motor temperature is high" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Name" Value="CutterTempError" />
+        <Property ID="Message" Value="Cutter conveyor motor is temperature is high" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Name" Value="CuttingZone" />
+        <Property ID="Message" Value="Cutter is in cutting zone please move it manually" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+    </Group>
+  </Element>
 </Configuration>

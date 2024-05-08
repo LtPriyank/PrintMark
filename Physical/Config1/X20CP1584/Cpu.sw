@@ -13,7 +13,9 @@
   </TaskClass>
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4" />
-  <TaskClass Name="Cyclic#5" />
+  <TaskClass Name="Cyclic#5">
+    <Task Name="PackML" Source="SOURCE.PackML.PackML.prg" Memory="UserROM" Description="This task is for PackMl Control" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7">
     <Task Name="DataCtrl" Source="SOURCE.DataCtrl.DataCtrl.prg" Memory="UserROM" Description="This task is for data control" Language="IEC" Debugging="true" />
@@ -23,11 +25,11 @@
     <DataObject Name="Acp10sys" Source="" Memory="UserROM" Language="Binary" />
   </DataObjects>
   <NcDataObjects>
-    <NcDataObject Name="acp10etxen" Source="acp10etxen.dob" Memory="UserROM" Language="Ett" />
-    <NcDataObject Name="gBeltAxisa" Source="gBeltAxisobj.gBeltAxisa.dob" Memory="UserROM" Language="Apt" />
-    <NcDataObject Name="gBeltAxisi" Source="gBeltAxisobj.gBeltAxisi.dob" Memory="UserROM" Language="Ax" />
-    <NcDataObject Name="gCutAxisa" Source="gCutAxisobj.gCutAxisa.dob" Memory="UserROM" Language="Apt" />
-    <NcDataObject Name="gCutAxisi" Source="gCutAxisobj.gCutAxisi.dob" Memory="UserROM" Language="Ax" />
+    <NcDataObject Name="acp10etxen" Source="acp10etxen.dob" Memory="UserROM" Description="Axis error configuration" Language="Ett" />
+    <NcDataObject Name="gBeltAxisa" Source="gBeltAxisobj.gBeltAxisa.dob" Memory="UserROM" Description="Belt axis parameter table" Language="Apt" />
+    <NcDataObject Name="gBeltAxisi" Source="gBeltAxisobj.gBeltAxisi.dob" Memory="UserROM" Description="Belt axis init table" Language="Ax" />
+    <NcDataObject Name="gCutAxisa" Source="gCutAxisobj.gCutAxisa.dob" Memory="UserROM" Description="Cutter axis parameter table" Language="Apt" />
+    <NcDataObject Name="gCutAxisi" Source="gCutAxisobj.gCutAxisi.dob" Memory="UserROM" Description="Cutter axis Init table" Language="Ax" />
   </NcDataObjects>
   <Binaries>
     <BinaryObject Name="FWRules" Source="" Memory="UserROM" Language="Binary" />
@@ -46,13 +48,14 @@
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Role" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwd" Source="" Memory="SystemROM" Language="Binary" />
-    <BinaryObject Name="BeltConfig" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="CutConfig" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="PrintAlarm" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="PrintCom" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="PrintPack" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="PrintData" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="BeltConfig" Source="" Memory="UserROM" Description="This is for belt axis configuration" Language="Binary" />
+    <BinaryObject Name="TC" Source="" Memory="UserROM" Description="TextSystem" Language="Binary" />
+    <BinaryObject Name="CutConfig" Source="" Memory="UserROM" Description="This is for cutting axis configuration" Language="Binary" />
+    <BinaryObject Name="PrintAlarm" Source="" Memory="UserROM" Description="This is mappservice config file for alarms" Language="Binary" />
+    <BinaryObject Name="PrintCom" Source="" Memory="UserROM" Description="Mp com configuration file" Language="Binary" />
+    <BinaryObject Name="PrintPack" Source="" Memory="UserROM" Description="Pack ML configuration" Language="Binary" />
+    <BinaryObject Name="PrintData" Source="" Memory="UserROM" Description="Data configuration file" Language="Binary" />
+    <BinaryObject Name="PrintWeb" Source="" Memory="UserROM" Description="webxs config file" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="Acp10man" Source="Libraries.Acp10man.lby" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -76,11 +79,13 @@
     <LibraryObject Name="FileIO" Source="Libraries.FileIO.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="DataObj" Source="Libraries.DataObj.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpFile" Source="Libraries.MpFile.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="asusb" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpWebXs" Source="Libraries.MpWebXs.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="AsArSdm" Source="Libraries.AsArSdm.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Description="Powelink" Language="Binary" Debugging="true" />
+    <LibraryObject Name="arssl" Source="" Memory="UserROM" Description="configuration, system information and runtime control" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Description="String file" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asieccon" Source="" Memory="UserROM" Description="For IEC functions" Language="Binary" Debugging="true" />
+    <LibraryObject Name="aruser" Source="" Memory="UserROM" Description="For defining users and roles" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asusb" Source="" Memory="UserROM" Description="For communication" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

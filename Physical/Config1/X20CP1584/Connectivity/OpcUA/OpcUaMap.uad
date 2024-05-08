@@ -18,12 +18,26 @@
         </Variable>
         <Variable Name="gAx_BeltConveyor" RecursiveEnable="2" />
         <Variable Name="gAx_Cutter" RecursiveEnable="2" />
+        <Variable Name="gPrintMark" RecursiveEnable="2" />
       </GlobalVariables>
       <Task Name="VisCtrl">
         <Variable Name="K_BELT_JOG_INIT" />
         <Variable Name="K_CUTTER_JOG_INIT" />
         <Variable Name="beltAnimation" />
         <Variable Name="cutterAnimation" />
+      </Task>
+      <Task Name="AlarmCtrl">
+        <Variable Name="printUIConnect" RecursiveEnable="2">
+          <Variable Name="AlarmList">
+            <Variable Name="Message" RecursiveEnable="2" />
+          </Variable>
+        </Variable>
+        <Variable Name="iFb_PrintMpAlarmXListUI" RecursiveEnable="2" />
+      </Task>
+      <Task Name="PackML">
+        <Variable Name="iFb_MpPackMLCorePrint" RecursiveEnable="2" />
+        <Variable Name="iFb_MpPackMLModeManual" RecursiveEnable="2" />
+        <Variable Name="iFb_MpPackMLModeAuto" RecursiveEnable="2" />
       </Task>
     </Module>
   </DefaultView>

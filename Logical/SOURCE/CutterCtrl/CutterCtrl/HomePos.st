@@ -14,10 +14,13 @@ ACTION HomePos:
 			gAx_Cutter.In.Parameters.Home.HomingVelocity := cutCtrl.Para.homeVelocity;
 			gAx_Cutter.In.Parameters.Home.Acceleration := cutCtrl.Para.homeVelocity * K_CUT_ACC_FACTOR;
 			IF((gAx_Cutter.Out.Position < K_HOME_LOW_RANGE))THEN
+					gPrintMark.Status.cuttingZone := FALSE;
 				gAx_Cutter.In.Parameters.Home.HomingDirection := mpAXIS_HOME_DIR_NEGATIVE;
 			ELSIF((gAx_Cutter.Out.Position > K_HOME_UP_RANGE))THEN
+					gPrintMark.Status.cuttingZone := FALSE;
 				gAx_Cutter.In.Parameters.Home.HomingDirection := mpAXIS_HOME_DIR_POSITIVE;
 			ELSIF((gAx_Cutter.Out.Position>K_HOME_LOW_RANGE)AND(gAx_Cutter.Out.Position < K_HOME_UP_RANGE))THEN
+				gPrintMark.Status.cuttingZone := TRUE;
 				cutCtrl.Cmd.bHome := FALSE;
 			END_IF;
 			IF(cutCtrl.Cmd.bHome = TRUE)THEN
@@ -27,6 +30,7 @@ ACTION HomePos:
 				OR(gAx_Cutter.Out.Position > (K_UNIT_PER_REV-K_HOME_POS_OFFSET)))THEN
 				enCutterHomeSteps := HOME_EXECUTE;
 			END_IF;
+		
 			
 		HOME_EXECUTE: //Executing homing for the axis
 			gAx_Cutter.In.Home := FALSE;

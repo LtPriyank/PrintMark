@@ -24,12 +24,12 @@
     </Group>
     <Group ID="limit">
       <Group ID="parameter">
-        <Parameter ID="v_pos" Value="120000.0" />
-        <Parameter ID="v_neg" Value="120000.0" />
-        <Parameter ID="a1_pos" Value="1.2E+07" />
-        <Parameter ID="a2_pos" Value="1.2E+07" />
-        <Parameter ID="a1_neg" Value="1.2E+07" />
-        <Parameter ID="a2_neg" Value="1.2E+07" />
+        <Parameter ID="v_pos" Value="180000.0" />
+        <Parameter ID="v_neg" Value="180000.0" />
+        <Parameter ID="a1_pos" Value="1.8E+07" />
+        <Parameter ID="a2_pos" Value="1.8E+07" />
+        <Parameter ID="a1_neg" Value="1.8E+07" />
+        <Parameter ID="a2_neg" Value="1.8E+07" />
         <Parameter ID="t_jolt" Value="0.01" />
         <Parameter ID="t_in_pos" Value="0.0" />
         <Parameter ID="pos_sw_end" Value="2000000000" />
@@ -46,8 +46,8 @@
       <Group ID="position">
         <Parameter ID="kv" Value="311.0" />
         <Parameter ID="tn" Value="0.0" />
-        <Parameter ID="t_predict" Value="0.0024" />
-        <Parameter ID="t_total" Value="0.0024" />
+        <Parameter ID="t_predict" Value="0.0048" />
+        <Parameter ID="t_total" Value="0.0048" />
         <Parameter ID="p_max" Value="1.0E+30" />
         <Parameter ID="i_max" Value="0.0" />
       </Group>

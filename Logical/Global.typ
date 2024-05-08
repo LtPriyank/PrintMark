@@ -88,6 +88,7 @@ TYPE
 *)
 		CutterDisable : BOOL; (*Command for disbling the cutter axis*)
 		SimSensor : BOOL; (*Command for enabling the simulated sensor*)
+		DualCutterEnable : BOOL; (*For enabling dual cutter*)
 	END_STRUCT;
 	PrintPara_Typ : 	STRUCT 
 		MachineSpeed : REAL; (*Machine speed parameter*)
@@ -99,21 +100,11 @@ TYPE
 	PrintStatus_Typ : 	STRUCT  (*Structure for showing the status of the machine*)
 		machineStatus : STRING[80]; (*For displaying status of the machine*)
 		powerOnHome : BOOL; (*For checking homing*)
-	END_STRUCT;
-	PrintIn_Typ : 	STRUCT  (*Structure for Inputs of the machine*)
-		New_Member : USINT;
-	END_STRUCT;
-	PrintOut_Typ : 	STRUCT  (*Structure for outputs of the machine*)
-		New_Member : USINT;
-	END_STRUCT;
-	PrintIO_Typ : 	STRUCT  (*Structure for IO's of the machine*)
-		Input : PrintIn_Typ;
-		Output : PrintOut_Typ;
+		cuttingZone : BOOL; (*The cutter is in cutting zone*)
 	END_STRUCT;
 	PrintCtrl_Typ : 	STRUCT  (*Structure of controlling the machine operation*)
 		Cmd : PrintCmd_Typ; (*Machine command type variable*)
 		Para : PrintPara_Typ; (*Machine parameters type variable*)
 		Status : PrintStatus_Typ; (*Machine status type variable*)
-		IO : PrintIO_Typ; (*Machine IO type variable*)
 	END_STRUCT;
 END_TYPE

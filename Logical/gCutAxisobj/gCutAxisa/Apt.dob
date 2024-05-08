@@ -2,6 +2,6 @@
 <?AutomationStudio FileVersion="4.9"?>
 <DataObject SubType="Apt" xmlns="http://br-automation.co.at/AS/DataObject">
   <Files>
-    <File>gCutAxisa.apt</File>
+    <File Description="Parameter table">gCutAxisa.apt</File>
   </Files>
 </DataObject>

@@ -11,5 +11,6 @@
     <Object Type="File">TopContent.binding</Object>
     <Object Type="File">MainContent.binding</Object>
     <Object Type="File">PrintAlarmContent.binding</Object>
+    <Object Type="File">MessageEvent.eventbinding</Object>
   </Objects>
 </Package>

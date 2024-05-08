@@ -90,5 +90,9 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_BeltConveyor.Out.PowerOn" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="BeltAxisPower_Lamp" attribute="selectedIndex" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_BeltConveyor.In.Parameters.Home.SensorOffset" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="BeltHomeOffset_NumericInput" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

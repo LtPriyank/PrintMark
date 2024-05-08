@@ -18,6 +18,9 @@ TYPE
 		bCutterSelect : BOOL; (*Command for disabling the cutter axis*)
 		bSimSensor : BOOL; (*Command for enabling the simualed sensor*)
 		bErrorReset : BOOL; (*Commad for reseting the machine*)
+		bEnableBeltSimu : BOOL; (*Commad for enabling belt animation*)
+		bEnableCutterSimu : BOOL; (*Command for enabling cutter animation*)
+		bDualCutter : BOOL; (*Command for dual cutter*)
 	END_STRUCT;
 	PrintParaHMI_Typ : 	STRUCT 
 		beltJogSpeed : REAL; (*Jog velocity for belt conveyor*)
@@ -40,10 +43,12 @@ TYPE
 		validPrintMarks : UDINT; (*Valid Print Marks*)
 		missedPrintMarks : UINT; (*Missed Print Marks*)
 		cutsPerMinute : UINT; (*Cuts per minute*)
+		bCutterHomeOffset : UINT; (*Cutter homing offset*)
 	END_STRUCT;
 	PrintStatusHMI_Typ : 	STRUCT  (*Structure for showing the status of the machine*)
 		machineStatus : STRING[80]; (*For displaying status of the machine*)
-		New_Member1 : USINT;
+		regMarkSensorActive : UINT; (*Variable for regmarksensor active*)
+		cutSensorActive : UINT; (*Variable for cut sensor active*)
 	END_STRUCT;
 	PrintInHMI_Typ : 	STRUCT  (*Structure for Inputs of the machine*)
 		New_Member : USINT;

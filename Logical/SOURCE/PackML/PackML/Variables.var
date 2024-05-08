@@ -1,0 +1,6 @@
+(*Variables of PackML Type*)
+VAR
+	iFb_MpPackMLModeAuto : MpPackMLMode; (*Variable for MpPackMLCore type*)
+	iFb_MpPackMLModeManual : MpPackMLMode; (*Variable for MpPackMLMode type*)
+	iFb_MpPackMLCorePrint : MpPackMLCore; (*Variable for MpPackMLMode type*)
+END_VAR

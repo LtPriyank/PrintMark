@@ -53,5 +53,9 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.bErrorReset" attribute="value" />
 <Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="MCReset_ToggleButton" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Cmd.bDualCutter" attribute="value" />
+<Target xsi:type="brease" contentRefId="AutoContent" widgetRefId="DualCuttingUnitSelect" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

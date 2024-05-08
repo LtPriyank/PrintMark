@@ -105,5 +105,10 @@
         <seg>SET SPEED(CPM)</seg>
       </tuv>
     </tu>
+    <tu tuid="DualCutter">
+      <tuv xml:lang="en">
+        <seg>DUAL CUTTER</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

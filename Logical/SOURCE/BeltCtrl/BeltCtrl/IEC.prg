@@ -5,8 +5,8 @@
     <File Description="Init, cyclic, exit code">Main.st</File>
     <File Description="Local data types" Private="true">Types.typ</File>
     <File Description="Local variables" Private="true">Variables.var</File>
-    <File>AxisIOMap.st</File>
-    <File>Manual.st</File>
-    <File>Homing.st</File>
+    <File Description="Belt Axis Mapping">AxisIOMap.st</File>
+    <File Description="Action file for manual belt operation">Manual.st</File>
+    <File Description="Action file for Homing operation">Homing.st</File>
   </Files>
 </Program>

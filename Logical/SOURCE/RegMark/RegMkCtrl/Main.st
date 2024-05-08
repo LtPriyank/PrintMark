@@ -1,4 +1,19 @@
-
+(*|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|*)
+(*| Copyright      :- B&R Industrial Automation GmbH                         |*)
+(*| Contact Person :-   kuma1p                                      		 |*)
+(*|——————————————————————————————————————————————————————————————————————————|*)
+(*| System       :-  Machine Name                                            |*)
+(*| Task Name    :-  RegMkCtrl.st                                            |*)
+(*| Auther Name  :-   kuma1p                                       			 |*)
+(*| Created Date :-May 8, 2024/1:04 AM                                       |*)
+(*| AS Version   :-  AS 4.12.2.93                                            |*)
+(*|——————————————————————————————————————————————————————————————————————————|*)
+(*| Description  :-  This task is for Regmark control                        |*)
+(*|                                                                          |*)
+(*|——————————————————————————————————————————————————————————————————————————|*)
+(*| Version :-         V 0.0                      kuma1p                     |*)
+(*|Changes Made :-    Reg Mark FB added                                      |*)
+(*|——————————————————————————————————————————————————————————————————————————|*)
 PROGRAM _INIT
 	//Init values of the Reg mark capture
 	gRegConfigPara.ProductLength := K_INIT_PROD_LENGTH;

@@ -53,7 +53,7 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::VisCtrl:beltAnimation" attribute="value" />
 <Target xsi:type="brease" contentRefId="MainContent" widgetRefId="BeltSlider11" attribute="value" />
-</Binding>
+		</Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::VisCtrl:cutterAnimation" attribute="value" />
 <Target xsi:type="brease" contentRefId="MainContent" widgetRefId="CutterSlider" attribute="value" />
@@ -73,6 +73,30 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Para.cutsPerMinute" attribute="value" />
 <Target xsi:type="brease" contentRefId="MainContent" widgetRefId="CutsPerMinute_NumericOutput" attribute="value" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Status.cutSensorActive" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="CutSlider" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMarkHMI.Status.regMarkSensorActive" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="RegMarkBasicSlider" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMark.Cmd.Estop" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="QuickStopMode" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPrintMark.Status.cuttingZone" attribute="value" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="CutZoneMessage" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="mapp" refId="gMl_PrintAlarm" attribute="link" />
+<Target xsi:type="brease" contentRefId="MainContent" widgetRefId="MainScreenAlarmList" attribute="mpLink" />
 </Binding>
 </Bindings>
 </BindingsSet>

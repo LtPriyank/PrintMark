@@ -1,5 +1,10 @@
+(*Cyclic write FB*)
+VAR
+	IFb_MC_BR_CyclicWrite : MC_BR_CyclicWrite; (*For cyclic reading*)
+END_VAR
 (*Constants*)
 VAR CONSTANT
+	K_SLIDER_MAX : USINT := 100; (*Maximum value of slider*)
 	K_ANIMATION_LIMIT : USINT := 100; (*Constant for animation*)
 	K_ZERO : USINT := 0; (*Constant zero value*)
 	K_CUTTER_JOG_INIT : REAL := 100; (*Init value for cutter jog speed*)
@@ -19,4 +24,8 @@ END_VAR
 VAR
 	beltAnimation : INT; (*Variable for animation of the belt*)
 	cutterAnimation : INT; (*Variable for animation of the cutter*)
+END_VAR
+(*Cyclic read*)
+VAR
+	simSignalActive : USINT := 1; (*For simulated signal*)
 END_VAR

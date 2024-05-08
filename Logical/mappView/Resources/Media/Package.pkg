@@ -13,5 +13,7 @@
     <Object Type="Package">Bitmaps</Object>
     <Object Type="Package">Stages</Object>
     <Object Type="File">drawing.svg</Object>
+    <Object Type="File">PESensor.png</Object>
+    <Object Type="File">PEsensor2.png</Object>
   </Objects>
 </Package>

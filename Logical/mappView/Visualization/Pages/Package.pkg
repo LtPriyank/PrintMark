@@ -8,5 +8,6 @@
     <Object Type="Package">AutomaticPage</Object>
     <Object Type="Package">AlarmPage</Object>
     <Object Type="Package">ServicePage</Object>
+    <Object Type="Package">PackMlPage</Object>
   </Objects>
 </Package>

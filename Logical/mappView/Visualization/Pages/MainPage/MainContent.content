@@ -5,9 +5,12 @@
       <Widgets>
         <Widget xsi:type="widgets.brease.Label" id="MachineMode_Label" top="54" left="19" width="143" height="42" zIndex="0" text="$IAT/Mode" textColor="rgba(64, 64, 64, 1)" textAlign="left" fontSize="20px" />
         <Widget xsi:type="widgets.brease.DropDownBox" id="ModeSelectionDropBox" top="43" left="277" width="223" height="62" zIndex="1" dataProvider="[{'value':'0','text':'$IAT/ManualMode'},{'value':'1','text':'$IAT/AutoMode'}]" listWidth="300" selectedValue="1" cornerRadius="20px" backColor="rgba(211, 211, 211, 1)" borderStyle="solid" borderWidth="1px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" activeBackColor="rgba(0, 0, 0, 1)" listTextColor="rgba(0, 0, 0, 1)" activeTextColor="rgba(0, 0, 0, 1)" fontSize="20px" />
+        <Widget xsi:type="widgets.brease.Label" id="Estop_Label" top="194" left="19" width="201" height="43" zIndex="2" text="$IAT/Estop" textColor="rgba(64, 64, 64, 1)" textAlign="left" fontSize="20px" />
+        <Widget xsi:type="widgets.brease.ToggleSwitch" id="QuickStopMode" top="174" left="280" width="221" height="66" zIndex="3" mouseDownText="$IAT/Enable" text="$IAT/Disable" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBorderColor="rgba(255, 255, 255, 1)" mouseDownBorderWidth="1px" mouseDownBackColor="rgba(255, 128, 128, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" foreColor="rgba(211, 211, 211, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="CutZoneMessage" top="333" left="-2" width="502" height="107" zIndex="4" text="$IAT/Cutterzone" textColor="rgba(0, 0, 0, 1)" fontSize="20px" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="CapStatus_GroupBox" top="60" left="1570" width="520" height="780" zIndex="3" text="PROCESS DETAILS" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(64, 64, 64, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(255, 255, 255, 1)" fontSize="25px">
+    <Widget xsi:type="widgets.brease.GroupBox" id="CapStatus_GroupBox" top="60" left="1620" width="520" height="780" zIndex="3" text="PROCESS DETAILS" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(64, 64, 64, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(255, 255, 255, 1)" fontSize="25px">
       <Widgets>
         <Widget xsi:type="widgets.brease.GroupBox" id="PrintMarkDetails_GroupBox" top="173" left="20" width="480" height="308" zIndex="0" text="$IAT/PrintMarksDetails" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(214, 214, 214, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="20px">
           <Widgets>
@@ -47,5 +50,15 @@
     <Widget xsi:type="widgets.brease.RadialSlider" id="BeltRadialSliderAxis2" top="600" left="80" width="241" height="241" zIndex="18" radius="75px" range="360" showValueDisplay="false" trackSize="50px" thumbColor="rgba(255, 255, 255, 0)" />
     <Widget xsi:type="widgets.brease.RadialSlider" id="CutterSlider" top="360" left="300" width="460" height="460" zIndex="19" maxValue="0" minValue="-100" radius="150px" range="360" showValueDisplay="false" startAngle="270" thumbSize="100px" trackSize="10px" thumbColor="rgba(105, 105, 105, 1)" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="460" left="400" width="260" height="260" zIndex="0" cornerRadius="150px" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Image" id="RegmarkSensor" top="200" left="440" width="221" height="200" zIndex="20" image="Media/PESensor.png" />
+    <Widget xsi:type="widgets.brease.Image" id="CutterSensor" top="460" left="120" width="201" height="200" zIndex="21" image="Media/PEsensor2.png" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="RegMarkBasicSlider" top="239" left="280" width="230" zIndex="22" orientation="RightToLeft" trackSize="0px" thumbColor="rgba(255, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="CutSlider" top="520" left="239" width="81" zIndex="23" trackSize="0px" thumbColor="rgba(255, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.AlarmList" id="MainScreenAlarmList" top="840" left="1000" width="1141" height="82" zIndex="24" itemsPerPage="1" searchBox="false" showPagingButtons="false">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="MainPageAlarmScope" zIndex="0" columnType="scope" text="SCOPE" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="MainPageAlarmList" width="940" zIndex="1" text="MESSAGE" />
+      </Widgets>
+    </Widget>
   </Widgets>
 </Content>

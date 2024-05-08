@@ -7,18 +7,20 @@
     <Page refId="MainPage" />
     <Page refId="ManualPage" />
     <Page refId="ServicePage" />
+    <Page refId="PackMl_page" />
   </Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="ManualContent_binding" />
     <BindingsSet refId="AutoContent_binding" />
     <BindingsSet refId="TopContent_binding" />
-    <BindingsSet refId="MainContent_binding" />
     <BindingsSet refId="PrintAlarmContent_binding" />
+    <BindingsSet refId="MainContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="CapAlarmContent_eventbinding" />
     <EventBindingsSet refId="PrintAlarmContent_eventbinding" />
+    <EventBindingsSet refId="eventbinding_2" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -32,6 +34,7 @@
     <Content refId="MainContent" />
     <Content refId="ManualContent" />
     <Content refId="ServiceContent" />
+    <Content refId="PackMlContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets>

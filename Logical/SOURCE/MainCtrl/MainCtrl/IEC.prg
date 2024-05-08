@@ -5,6 +5,7 @@
     <File Description="Init, cyclic, exit code">Main.st</File>
     <File Description="Local data types" Private="true">Types.typ</File>
     <File Description="Local variables" Private="true">Variables.var</File>
-    <File>Automatic.st</File>
+    <File Description="Action file for automatic mode">Automatic.st</File>
+    <File Description="Action file for alarms">PrintAlarm.st</File>
   </Files>
 </Program>

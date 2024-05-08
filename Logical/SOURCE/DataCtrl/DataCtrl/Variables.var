@@ -1,5 +1,5 @@
 (*Variable of MpDataRecorder type*)
 VAR
-	MpDataRecorder_Print : MpDataRecorder; (*Variable of MpDataRecorder type*)
-	MpDataRegPar_Avg : MpDataRegPar; (*VAriable of MpDataRegPar type*)
+	iFb_PrintMpDataRecorder : MpDataRecorder; (*Variable of MpDataRecorder type*)
+	iFb_AvgMpDataRegPar : MpDataRegPar; (*VAriable of MpDataRegPar type*)
 END_VAR

@@ -33,5 +33,10 @@
         <seg>Alarm Page</seg>
       </tuv>
     </tu>
+    <tu tuid="PackMl">
+      <tuv xml:lang="en">
+        <seg>Pack Ml</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -9,5 +9,6 @@
     <Object Type="Package">AlarmCtrl</Object>
     <Object Type="Package">VisCtrl</Object>
     <Object Type="Package">DataCtrl</Object>
+    <Object Type="Package">PackML</Object>
   </Objects>
 </Package>

@@ -9,6 +9,7 @@ VAR
 	errorAckFound : BOOL; (*Error acknowledge found*)
 	enAutoStep : enAutoMode; (*Auto states*)
 	cutPerMinTimer : UINT; (*Timer for cuts per minute*)
+	simSignalActive : UINT := 1; (*For simulated signal*)
 	cutPerMinCount : UINT; (*Counter for cuts per minute*)
 	machineReady : BOOL; (*Machine is ready*)
 END_VAR
@@ -22,6 +23,8 @@ VAR CONSTANT
 	K_MANUAL : UINT := 0; (*Constant for manual mode*)
 	K_INIT_MACHINE_SPEED : UINT := 50; (*Init value of machine speed*)
 	K_MINUTE_TIMER : UDINT := 37500; (*Timer for cuts per minute*)
+	MAX_ALARMS : USINT := 50; (*Maximum no. of alarms*)
+	K_MAX_TEMP : UINT := 500; (*MAximum temperature allowed*)
 	K_AUTO : UINT := 1; (*Constant for auto mode*)
 END_VAR
 (*Local Pointer method variables for accessing other modules*)
@@ -38,4 +41,14 @@ END_VAR
 (*FB for edge control*)
 VAR
 	R_TRIG_CPM : R_TRIG; (*Positive edge of the sensor*)
+END_VAR
+(*Variables for alarm*)
+VAR
+	iString : ARRAY[0..MAX_ALARMS] OF STRING[20]; (*Alarm name storage variable*)
+	Alarm : ARRAY[0..MAX_ALARMS] OF BOOL; (*Alarm name*)
+	alarmIndex : USINT; (*Index for alarms*)
+END_VAR
+(*Cyclic write FB*)
+VAR
+	IFb_MC_BR_CyclicWrite : MC_BR_CyclicWrite; (*For cyclic reading*)
 END_VAR

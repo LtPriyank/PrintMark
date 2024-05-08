@@ -6,5 +6,6 @@
     <Object Type="File">PrintCom.mpcomgroup</Object>
     <Object Type="File">PrintPack.mppackmlcore</Object>
     <Object Type="File">PrintData.mpdatarecorder</Object>
+    <Object Type="File">PrintWeb.mpwebxs</Object>
   </Objects>
 </Package>

@@ -1,5 +1,7 @@
 (*Variables for MpAlarmxCore*)
 VAR
-	MpAlarmXCore_Print : MpAlarmXCore; (*Variable of MpAlarmxCore FB Type*)
+	iFb_PrintMpAlarmXCore : MpAlarmXCore; (*Variable of MpAlarmxCore FB Type*)
 	bAlarmXCoreReset : BOOL; (*Variable for reseting MpAlarmxCore FB*)
+	iFb_PrintMpAlarmXListUI : MpAlarmXListUI; (*Variable for list of alarms*)
+	printUIConnect : MpAlarmXListUIConnectType; (*Variable for list of alarms*)
 END_VAR

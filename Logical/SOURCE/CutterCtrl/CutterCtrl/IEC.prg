@@ -6,9 +6,9 @@
     <File Description="Local data types" Private="true">Types.typ</File>
     <File Description="Local variables" Private="true">Variables.var</File>
     <File>AxisIOMap.st</File>
-    <File>HomePos.st</File>
-    <File>Homing.st</File>
-    <File>Manual.st</File>
-    <File>PrintCam.st</File>
+    <File Description="Homing action file">HomePos.st</File>
+    <File Description="Homing action file">Homing.st</File>
+    <File Description="Manual cutter operation">Manual.st</File>
+    <File Description="Caming action file single cutter">PrintCam.st</File>
   </Files>
 </Program>

@@ -19,7 +19,21 @@
       <Parameter Name="CAMCON_CAM_S1+0" ID="10832" Value="600" Description="FB0 CAMCON Start position of cam within interval" />
       <Parameter Name="CAMCON_CAM_S2+0" ID="10840" Value="690" Description="FB0 CAMCON End position of cam within interval" />
       <Parameter Name="CAMCON_VALUE+0" ID="10848" Value="0" Description="FB0 CAMCON Output value" />
-      <Parameter Name="CAMCON_MODE+0" ID="10752" Value="1" Description="FB0 CAMCON Mode" />
+      <Parameter Name="CAMCON_MODE+0" ID="10752" Value="1" Disabled="TRUE" Description="FB0 CAMCON Mode" />
+    </Group>
+    <Group Name="DIO" Disabled="FALSE">
+      <Parameter Name="FUNCTION_BLOCK_CREATE" ID="777" Value="5776" Disabled="FALSE" Description="Function block: Create a FB instance" />
+      <Parameter Name="DIO_OUT1_PARID+0" ID="5776" Disabled="TRUE" Description="FB0 DIO parameter ID of output 1" />
+      <Parameter Name="DIO_OUT2_PARID+3" ID="5787" Value="10848" Disabled="FALSE" Description="FB3 FB DIO: parameter ID of output 2" />
+      <Parameter Name="DIO_OUT3_PARID+0" ID="5792" Disabled="TRUE" Description="FB0 DIO parameter ID of output 3" />
+      <Parameter Name="DIO_OUT4_PARID+0" ID="5800" Disabled="TRUE" Description="FB0 DIO parameter ID of output 4" />
+      <Parameter Name="DIO_OUT5_PARID+0" ID="5808" Disabled="TRUE" Description="FB0 DIO parameter ID of output 5" />
+      <Parameter Name="DIO_OUT6_PARID+0" ID="5816" Disabled="TRUE" Description="FB0 DIO parameter ID of output 6" />
+      <Parameter Name="DIO_OUT7_PARID+0" ID="5824" Disabled="TRUE" Description="FB0 DIO parameter ID of output 7" />
+      <Parameter Name="DIO_OUT8_PARID+0" ID="5832" Disabled="TRUE" Description="FB0 DIO parameter ID of output 8" />
+      <Parameter Name="DIO_OUT9_PARID+0" ID="5840" Disabled="TRUE" Description="FB0 DIO parameter ID of output 9" />
+      <Parameter Name="DIO_OUT10_PARID+0" ID="5848" Disabled="TRUE" Description="FB0 DIO parameter ID of output 10" />
+      <Parameter Name="DIO_DIR+3" ID="5923" Value="771" Disabled="FALSE" Description="FB3 FB DIO: IO configuration" />
     </Group>
   </Root>
 </AcoposParameterTable>

@@ -1,4 +1,4 @@
-	
+
 ACTION Automatic: 
 	
 	//Basic input parameters for the machine
@@ -36,8 +36,10 @@ ACTION Automatic:
 	//Estop and emergency conditions for the machine
 	IF (gPrintMark.Cmd.Estop = TRUE) THEN
 		eStopPressed := TRUE;
+		Alarm[0] := TRUE;
 	ELSIF (gPrintMark.Cmd.Estop = TRUE) AND (errorAckRising = TRUE) THEN
 		eStopPressed := FALSE;
+		Alarm[0] := FALSE;
 	END_IF
 
 	IF (gAx_BeltConveyor.Out.StatusID <> 0) OR (gAx_BeltConveyor.Out.Error = TRUE) OR
@@ -102,6 +104,7 @@ ACTION Automatic:
 					gAx_CutterCam.In.EndSequence := FALSE;
 				END_IF
 				gAx_BeltConveyor.In.MoveVelocity := TRUE;
+				gPrintMarkHMI.Cmd.bEnableBeltSimu := TRUE;
 				enAutoStep := EXECUTE;
 			END_IF;
 			
@@ -113,6 +116,7 @@ ACTION Automatic:
 				gAx_BeltConveyor.In.Parameters.Stop.StopInPhase := TRUE;
 				gAx_BeltConveyor.In.Parameters.Stop.Phase := K_ZERO;
 				gAx_BeltConveyor.In.Parameters.Stop.Deceleration := gPrintMark.Para.MachineSpeed * K_DEC_FACTOR;
+				gPrintMarkHMI.Cmd.bEnableBeltSimu := FALSE;
 				enAutoStep := STOPPING;
 			END_IF
 			IF(gPrintMark.Cmd.CutterDisable = TRUE)THEN
@@ -132,6 +136,7 @@ ACTION Automatic:
             
 		ABORTED:	//Error Acknowledgement
 			gPrintMark.Status.machineStatus := 'Machine is in Error';
+			gPrintMarkHMI.Cmd.bEnableBeltSimu := FALSE;
 			IF (gAx_BeltConveyor.Out.Stopped = TRUE) OR
 				(gAx_BeltConveyor.Out.Info.PLCopenState = mpAXIS_ERRORSTOP) OR
 				(gAx_BeltConveyor.Out.Info.PLCopenState = mpAXIS_DISABLED) OR 

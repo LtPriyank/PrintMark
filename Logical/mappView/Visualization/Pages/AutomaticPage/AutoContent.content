@@ -72,16 +72,22 @@
     </Widget>
     <Widget xsi:type="widgets.brease.GroupBox" id="AutoOptions_GroupBox" top="20" left="560" width="520" height="900" zIndex="3" text="$IAT/AutoOptions" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(64, 64, 64, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(255, 255, 255, 1)" fontSize="25px">
       <Widgets>
-        <Widget xsi:type="widgets.brease.GroupBox" id="MachineSpeed_GroupBox1" top="14" left="18" width="482" height="267" zIndex="0" text="$IAT/MachineSpeed" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(214, 214, 214, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="20px">
+        <Widget xsi:type="widgets.brease.GroupBox" id="MachineSpeed_GroupBox1" top="14" left="18" width="482" height="267" zIndex="0" text="$IAT/SensorSimulation" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(214, 214, 214, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="20px">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="SimulationSignal_Label" top="38" left="18" width="222" height="42" zIndex="0" text="$IAT/SensorSimulation" textColor="rgba(64, 64, 64, 1)" textAlign="center" fontSize="20px" />
             <Widget xsi:type="widgets.brease.ToggleSwitch" id="SensorSimulation" top="18" left="259" width="202" height="69" zIndex="1" mouseDownText="$IAT/Enable" text="$IAT/Disable" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBorderColor="rgba(255, 255, 255, 1)" mouseDownBorderWidth="1px" mouseDownBackColor="rgba(255, 128, 0, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" foreColor="rgba(211, 211, 211, 1)" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.GroupBox" id="MachineSpeed_GroupBox2" top="293" left="18" width="482" height="267" zIndex="1" text="$IAT/MachineSpeed" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(214, 214, 214, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="20px">
+        <Widget xsi:type="widgets.brease.GroupBox" id="MachineSpeed_GroupBox2" top="293" left="18" width="482" height="267" zIndex="1" text="$IAT/CuttingUnit" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(214, 214, 214, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="20px">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="CuttingUnitSelect_Label" top="38" left="18" width="143" height="42" zIndex="0" text="$IAT/CuttingUnit" textColor="rgba(64, 64, 64, 1)" textAlign="center" fontSize="20px" />
             <Widget xsi:type="widgets.brease.ToggleSwitch" id="CuttingUnitSelect" top="19" left="259" width="202" height="69" zIndex="1" mouseDownText="$IAT/Enable" text="$IAT/Disable" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBorderColor="rgba(255, 255, 255, 1)" mouseDownBorderWidth="1px" mouseDownBackColor="rgba(255, 128, 0, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" foreColor="rgba(211, 211, 211, 1)" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.GroupBox" id="DualCutter_GroupBox" top="573" left="18" width="482" height="267" zIndex="2" text="$IAT/DualCutter" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" headerBackColor="rgba(214, 214, 214, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="20px">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Label" id="DualCutter_Label" top="38" left="18" width="143" height="42" zIndex="0" text="$IAT/DualCutter" textColor="rgba(64, 64, 64, 1)" textAlign="center" fontSize="20px" />
+            <Widget xsi:type="widgets.brease.ToggleSwitch" id="DualCuttingUnitSelect" top="19" left="259" width="202" height="69" zIndex="1" mouseDownText="$IAT/Enable" text="$IAT/Disable" borderWidth="1px" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(64, 64, 64, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownBorderColor="rgba(255, 255, 255, 1)" mouseDownBorderWidth="1px" mouseDownBackColor="rgba(255, 128, 0, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" foreColor="rgba(211, 211, 211, 1)" />
           </Widgets>
         </Widget>
       </Widgets>

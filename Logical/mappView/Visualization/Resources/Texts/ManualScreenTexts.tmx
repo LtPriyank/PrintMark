@@ -80,5 +80,10 @@
         <seg>RESET</seg>
       </tuv>
     </tu>
+    <tu tuid="Cutterzone">
+      <tuv xml:lang="en">
+        <seg>CUTTER IS IN CUTTING ZONE PLEASE REMOVE IT!!!!</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

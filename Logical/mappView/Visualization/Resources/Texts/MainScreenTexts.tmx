@@ -60,5 +60,10 @@
         <seg>CUTS PER MINUTE</seg>
       </tuv>
     </tu>
+    <tu tuid="Estop">
+      <tuv xml:lang="en">
+        <seg>E_STOP</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
