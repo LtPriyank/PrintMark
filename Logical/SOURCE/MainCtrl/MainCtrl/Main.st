@@ -79,6 +79,11 @@ PROGRAM _CYCLIC
 	//Calling alarm file
 	PrintAlarm;
 	
+	//Writing camcon par ID 10752
+	IF(gAx_CutterCam.Out.InSync = TRUE)THEN
+		IFb_MC_BR_CyclicWrite(Axis := ADR(gCutAxis), Enable := TRUE, ParID := 10752, DataAddress := ADR(simSignalActive), DataType :=ncPAR_TYP_UINT);
+	END_IF
+	
 	
 
 END_PROGRAM
